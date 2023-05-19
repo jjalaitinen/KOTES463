@@ -6,6 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/vs2015.min.css"
+    />
+    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
@@ -103,8 +107,8 @@
         </p>
         <p>
           Tämä osio sisältää omaa taitoa harjaannuttavia harjoituksia.
-          Harjoituksissa tulee soveltaa aiemmin materiaalissa opittuja taitoja
-          ja kaikki harjoitukset on luokiteltu tähtien avulla vaikeusasteittain.
+          Harjoituksissa tulee soveltaa aiemmin materiaalissa opittuja taitoja.
+          Harjoitustehtävät on luokiteltu tähtien avulla vaikeusasteittain.
         </p>
         <ul>
           <li>
@@ -190,48 +194,98 @@
           </li>
         </ul>
         <div>
-          <h2>Etsi taulukon toiseksi suurin</h2>
-          <p>Harjoittelimme</p>
+          <h2>Tehtävä 1 - Etsi listan toiseksi suurin</h2>
+          <p>
+            Seuraava taulukko pitää sisällään 20 kokonaislukua ja liukulukua.
+            Tehtävänäsi on kirjoittaa ohjelma, joka etsii ja palauttaa listan
+            <b>toiseksi</b> suurimman alkion.
+          </p>
+          <pre>
+          <code>numerotaulukko = [2, 8, 1.3, 9.0, 10, 81, 0.5, -25, 63, 212, 4.3, 12, 21, 50, 61, 2.1, 82, -10, 0.78463, 109]</code>
+        </pre>
+          <p>
+            Voit kokeilla ohjelman toimintaa myös seuraavalla n. 10 000 alkiota
+            sisältävällä taulukolla :). 10 000:n alkion lista löytyy muuttujasta
+            "randomi_lista".
+          </p>
+          <pre>
+          <code>import random
+randomi_lista = random.sample(range(0, 1000000), 10000)
+print(randomi_lista)</code>
+        </pre>
         </div>
         <div>
-          <h2>Etsi taulukon parilliset</h2>
-          <p>Noniin</p>
+          <h2>Tehtävä 2 - Etsi listan parilliset</h2>
+          <p>
+            Seuraava lista pitää sisällään 30 kokonaislukualkiota. Kirjoita
+            ohjelma, joka etsii listan kaikki parilliset alkiot ja tulostaa
+            niistä jokaisen omalle rivilleen.
+          </p>
+          <pre>
+          <code>lista = [20, 35, 48, 89, 36, 38, 34, 63, 79, 82, 32, 12, 52, 72, 19, 37, 94, 39, 74, 33, 45, 85, 86, 59, 7, 61, 42, 93, 22, 23]</code>
+        </pre>
         </div>
         <div>
-          <h2>Tarkista käyttäjän ikä</h2>
-          <p>JOOpa</p>
+          <h2>Tehtävä 3 - Horoskooppi</h2>
+          <p>
+            Tehtävänäsi on kirjoittaa ohjelma, joka kysyy käyttäjältä ensiksi
+            syntymäpäivänsä ja kertoo tämän jälkeen, mikä hänen horoskooppinsa
+            on. Voit käyttää hyödyksesi alla olevaa taulukkoa horoskooppien
+            päivämääristä:
+          </p>
         </div>
         <div>
-          <h2>Keskiarvo ilman valmista funktiota</h2>
-          <p>lasketaan</p>
+          <h2>Tehtävä 4 - Keskiarvo ilman valmista funktiota</h2>
+          <p>
+            Seuraavassa listassa on Vili-Mirjamin 9.lk:n päättötodistuksen
+            arvosanat. Kirjoita Python-ohjelma, joka laskee päättötodistuksen
+            kaikkien arvosanojen keskiarvon ja tulostaa sen.
+          </p>
+          <pre>
+          <code>arvosanat = [7, 9, 10, 5, 6, 6, 8, 9, 10, 5, 7, 9, 7, 6, 7, 10, 8, 7]</code>
+        </pre>
         </div>
         <div>
-          <h2>Palindromi</h2>
-          <p>Palindromilla tarkoitetaan</p>
+          <h2>Tehtävä 5 - Palindromi</h2>
+          <p>
+            Palindromilla tarkoitetaan sanaa, virkettä lukua tai mitä tahansa
+            merkkijonoa, jonka merkkien järjestys on takaperin sama, kuin
+            etuperin. Esimerkiksi: "saippuakauppias" tai "abba". Tehtävänäsi on
+            kirjoittaa Python-ohjelma, joka ottaa syötteeksi merkkijonon ja
+            tarkistaa onko kyseessä palindromi.
+          </p>
         </div>
         <div>
-          <h2>Sanalaskuri</h2>
+          <h2>Tehtävä 6 - Sanalaskuri</h2>
+          <p>
+            Sanalaskuri kertoo nimensä mukaisesti, kuinka monta sanaa tekstistä
+            löytyy. Tehtävänäsi on kirjoittaa Python-ohjelma joka laskee sille
+            tuodusta merkkijonosta sanojen määrän ja tulostaa vastauksen.
+          </p>
+        </div>
+        <div>
+          <h2>Tehtävä 7 - Lyhentäjä</h2>
           <p></p>
         </div>
         <div>
-          <h2>Lyhentäjä</h2>
+          <h2>Tehtävä 8 - FizzBuzz</h2>
           <p></p>
         </div>
         <div>
-          <h2>FizzBuzz</h2>
+          <h2>Tehtävä 9 - Collatzin konjektuuri</h2>
           <p></p>
         </div>
         <div>
-          <h2>Collatzin konjektuuri</h2>
-          <p></p>
-        </div>
-        <div>
-          <h2>Anagrammi</h2>
-          <p></p>
+          <h2>Tehtävä 9 - Anagrammi</h2>
+          <p>Anagrammi tarkoittaa sitä, että</p>
         </div>
       </div>
     </div>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
     <!-- JavaScript Bundle with Popper -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"

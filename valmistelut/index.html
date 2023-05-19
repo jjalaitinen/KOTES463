@@ -1,0 +1,449 @@
+<!-- Valmistelut -->
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="tyylit.css" />
+    <title>Ohjelmoinnin perusteet - valmistelut</title>
+  </head>
+  <body>
+    <!-- Navigaatio -->
+    <!-- Navigaatio "kotimerkki" -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-house-door-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+            />
+          </svg>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Elementit navbarissa vasemmalla-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav me-auto">
+            <!-- Tässä ollaan -->
+            <a class="nav-link active" href="#">Valmistelut</a>
+            <a class="nav-link" href="../muuttujat-ja-tulostaminen/"
+              >Muuttujat ja tulostaminen</a
+            >
+            <a class="nav-link" href="../kommentointi-ja-peruslaskutoimitukset/"
+              >Kommentointi ja peruslaskutoimitukset</a
+            >
+            <a class="nav-link" href="../ehtolauseet-ja-silmukat/"
+              >Ehtolauseet ja silmukat</a
+            >
+            <a class="nav-link" href="../funktiot/">Funktiot</a>
+          </div>
+          <!--Navbar oikealla puolella olevat elementit-->
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="../harjoituksia/">Harjoituksia</a>
+            <a class="nav-link" href="../info/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-info-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                />
+                <path
+                  d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                />
+              </svg>
+            </a>
+            <a class="nav-link" href="../../en/get-started/">eng</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Varsinainen tekstisisältö-->
+    <div class="container">
+      <div class="text-center mt-3">
+        <h1>Valmistelut</h1>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Teoria</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./tehtavat/">Tehtävät</a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+      <div class="progress text-center sticky-top">
+        <div
+          class="progress-bar"
+          role="progressbar"
+          style="width: 0%"
+          aria-valuenow="25"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        ></div>
+      </div>
+      <div class="mt-3">
+        <h2>Kädet multaan!</h2>
+        <p>
+          Tässä osiossa tutustumme siihen, mitä ohjelmointi ja ohjelmoinnillinen
+          tapa ajatella on. Lisäksi asennamme tietokoneelle tarvittavat
+          ohjelmistot materiaalin suorittamista varten. Kirjoitamme myös
+          ihka-ensimmäisen ohjelmakoodin.
+        </p>
+        <div class="mt-4">
+          <h4>Mitä ohjelmointi ja ohjelmoinnillinen ajattelu on?</h4>
+          <p>
+            Ohjelmoinnillinen ajattelu on tapa ajatella ja ohjelmointi voidaan
+            nähdä tapana kertoa omasta ajattelustaan. Maailma mullistuu
+            jatkuvalla vauhdilla ja on vaikea keksiä ammatteja tai toimialoja,
+            joissa tietokoneita ei hyödynnettäisi toiminnassa lainkaan.
+            <b>Autot</b> sisältävät järkyttävän määrän ohjelmoituja elementtejä
+            ja ovat ikään kuin pieniä robotteja, <b>liikunnan</b> ja urheilun
+            saralla mittarit mittaavat ja analysoivat meitä jatkuvasti ja
+            yhteiskuntamme ulottuu pitkälti täysin sosiaalisen median
+            verkostoihin. Listaa voisi jatkaa ikuisuuksiin, mutta se ei ole
+            järkevää. Järkevää on pureutua siihen, miten voimme tätä
+            tietoyhteiskuntaa pyrkiä ymmärtämään. Miksi kirjautuessamme sisään
+            ohjelma tietää, että kyseessä oleva henkilö on juuri sinä? Kuinka
+            tietokone osaa hakea jatkuvasti sähköpostiviestejä postilaatikkoon?
+            Mitä kaikkea oikein "konepellin" alla tapahtuukaan?
+          </p>
+          <p>
+            Kaikki nämä edellä mainitut tapaukset sisältävät ohjelmakoodia.
+            Ohjelmointia on kaikkialla ja sitä ei käy kieltäminen.
+            <b>Ohjelmoinnillinen ajattelu</b> ja <b>ohjelmointi</b> ovat
+            kuitenkin paljon laajempia käsitteitä, kuin <b>"koodaus"</b>.
+            Ohjelmoinnillisella ajattelulla yhdistetään tietokoneen "voima"
+            arkipäivän pulmiin. Ohjelmoinnillisesti ajatteleva henkilö osaa
+            valjastaa uudenlaiset tietokoneen tuomat työkalut eri alojen avuksi,
+            niin että ongelmia ratkastaan entistä tehokkaammin ja varmemmin.
+          </p>
+          <p>
+            Myös ohjelmointi kattaa paljon enemmän, kuin koodaamisen ja sitä
+            tulemme tässä materiaalissa harjoittelemaan. Ohjelmointi on
+            pyrkimystä ymmärtää, miten asiat tehdään kun taas koodaus on sitä
+            asioiden tekemistä. Voisi ajatella, että ohjelmointi on ajatustyötä,
+            kun taas koodaaminen on ainoastaan ajatusten kirjaamista ylös.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-2"></div>
+
+      <div class="mt-5">
+        <h4>1. Pythonin "asentaminen"</h4>
+        <p>
+          Ohjelmakoodia voi kirjoittaa vaikka vihkoon lyijykynällä tai
+          PowerPoint-esitelmän muistiinpanoihin. Tämä ei ole kuitenkaan kovin
+          mielekästä, sillä emme pysty "ajamaan" eli suorittamaan koodia
+          mitenkään. Voimme ainoastaan tarkastella koodin logiikkaa ajatuksen
+          tasolla. Tietokoneelle nämä koodinpätkät eivät kuitenkaan merkitse
+          mitään. On yhtä mielekästä tehdä Taiwanin pääkaupungissa Taipeissa
+          ravintolatilaus suomeksi ja odottaa, että tarjoilija toimii ohjeiden
+          mukaan. Molemmissa tilanteissa tarvitaan tulkkia, jotain
+          välikappaletta, joka osaa kertoa tarpeemme eteenpäin.
+        </p>
+        <p>
+          Aloitetaan urakka siis asentamalla Python-tulkki. Tarvitsemme tätä
+          siksi, että tietokoneemme ymmärtäisi koodiamme. Tietokone ymmärtää,
+          että "puhumme Pythonia" ja tietää toimia käskyjemme mukaan.
+          <b>Asennusta varten seuraa ohjeita:</b>
+        </p>
+        <ol>
+          <li>
+            Siirry Pythonin nettisivuille osoitteeseen:
+            <a href="https://www.python.org/downloads/"
+              >https://www.python.org/downloads/</a
+            >
+          </li>
+          <li>
+            Lataa Python-julkaisun viimeisin versio
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right-short"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+              />
+            </svg>
+            <b>Python 3.11.0</b> <i>(28.11.2022)</i> klikkaamalla
+            latauspainiketta.
+          </li>
+          <li>
+            <img src="./lataus.PNG" alt="lataus" />Selain lataa paketin talteen
+            internet-yhteyden nopeudesta riippuen muutamassa minuutissa.
+          </li>
+          <li>Klikataan ladattua tiedostoa ja käynnistetään asennusohjelma.</li>
+          <li>Valitaan checkbox "Add python.exe to PATH" aktiiviseksi</li>
+          <li>
+            Klikataan "Install Now".
+            <i
+              >(jos asennusohjelma kyselee lupia, niin kliksutellaan niihin
+              "Yes", "Accept" tmv.)</i
+            >
+          </li>
+          <li>Tulkin pitäisi itsekseen asentua loppuun.</li>
+        </ol>
+        <div class="mt-4">
+          <p>
+            Onnistuiko? Kokeile avata <i>komentokehote</i> eli "CMD"
+            kirjoittamalla "cmd" hakukenttään
+            <img src="./search.PNG" alt="Hakukenttä" />. Kun komentokehote
+            aukeaa, kokeile syöttää kehotteelle <kbd>python --version</kbd>. Jos
+            vastaus ei ole mikään error, niin kaiken pitäisi pelittää!
+          </p>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="python_tulkki"
+          />
+          <label class="form-check-label" for="python_tulkki">
+            <strong> Python tulkki asennettu </strong>
+          </label>
+        </div>
+      </div>
+
+      <div class="mt-5">
+        <h4>2. Tekstieditorin asentaminen</h4>
+        <p>
+          Toinen tärkeä osa ohjelmointiurakkaa on kunnollinen tekstieditori.
+          Vaikka voisimme edelleen kirjoittaa ohjelmakoodia tietokoneelta
+          löytyvään tekstieditoriin esimerkiksi Microsoft Wordiin tai
+          notepadiin, tekee ohjelmointiin tarkoitettu tekstieditori työstä
+          huomattavasti helpompaa. Se esimerkiksi tunnistaa ohjelmoinnille
+          oleellisia sanoja ja värikoodaa niitä, jotta kirjoittamamme
+          ohjelmakoodi olisi selkeämpää. Se on myös tarpeeksi älykäs ja huomaa
+          usein virheet ennen meitä, jolloin säästymme turhalta työltä. Eron
+          kunnollisen tekstieditorin ja tavallisen muistion kanssa huomaa
+          helposti:
+        </p>
+        <div class="row">
+          <div class="col">
+            <img src="./vs_esimerkki.PNG" class="img-fluid" alt="VS" />
+          </div>
+          <div class="col">
+            <img
+              src="./notepad_esimerkki.PNG"
+              class="img-fluid"
+              alt="Notepad"
+            />
+          </div>
+        </div>
+        <p>
+          Tekstieditoriksi suosittelen tätä kokonaisuutta varten yllä näkyvää
+          Visual Studio Codea. Se on kattava, mutta samalla kevyt tekstieditori.
+          Ohjeet tekstieditorin asentamiseen:
+        </p>
+        <ol>
+          <li>
+            Siirry Visual Studio Coden nettisivuille osoitteeseen:
+            <a href="https://code.visualstudio.com/"
+              >https://code.visualstudio.com/</a
+            >
+          </li>
+          <li>
+            Valitse <b>"Download for Windows"</b>
+            <i
+              >(jos käytössäsi on jokin muu käyttöjärjestelmä, niin
+              nuolipainikkeesta pääset "dropdown"-valikon kautta valitsemaan
+              oikean version)</i
+            >
+          </li>
+          <li>
+            Selain lataa jälleen asennusohjelman talteen ja pääset käynnistämään
+            asennusohjelman.
+          </li>
+          <li>
+            Käynnistä asennusohjelma klikkaamalla taas ladattua tiedostoa.
+          </li>
+          <li>
+            Valitse radiobutton <b>"I accept the agreement"</b> -aktiiviseksi
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right-short"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+              />
+            </svg>
+            <b>"Next >"</b>
+          </li>
+          <li>
+            Valitse minne haluat tekstieditorin asentaa (oletus sijainti on
+            varmasti ihan ok)
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right-short"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+              />
+            </svg>
+            <b>"Next >"</b>
+          </li>
+          <li>
+            Asennusohjelma luo ohjelmalle pikanäppäimen (tämä on hyödyllinen)
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right-short"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+              />
+            </svg>
+            <b>"Next >"</b>
+          </li>
+          <li>
+            Tarkista, että checkbox "Add to PATH" on ruksitettu. Voit myös
+            ruksittaa kohdan "Create a desktop icon", jos haluat työpöydälle
+            klikattavan kuvakkeen.
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right-short"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+              />
+            </svg>
+            <b>"Next >"</b>
+          </li>
+          <li>Install</li>
+          <li>
+            Asennettuasi ohjelman, valitse
+            <b>"Launch Visual Studio Code"</b> -checkbox aktiiviseksi ja klikkaa
+            vielä <b>"Finish"</b>
+          </li>
+        </ol>
+        <div class="mt-4">
+          <p>
+            Jos suoritit kaikki stepit tarkasti tulisi Visual Studio Coden
+            käynnistyä.
+            <i
+              >(Voit suorittaa "Get Started" -tutoriaalin, mutta tulemme
+              harjoittelemaan yhdessä ohjelman käyttöä
+              <b>"Tehtävät"</b> -sivulla.)</i
+            >
+          </p>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="tekstieditori"
+          />
+          <label class="form-check-label" for="tekstieditori">
+            <strong>Tekstieditori asennettu</strong>
+          </label>
+        </div>
+      </div>
+
+      <div class="mt-5 mb-5">
+        <h4>3. Python laajennus tekstieditoriin (Visual Studio Code)</h4>
+        <p>
+          Saadaksemme kaiken ilon irti tekstieditorista on siihen hyvä myös
+          lisätä laajennus (extension). Tekstieditoria voi käyttää monien eri
+          ohjelmointikielien kanssa ja siksi laajennuksen avulla voimme selittää
+          tekstieditorille, että nyt kyseessä on Python-koodia. Visual Studio
+          Codesta löytyy laajennus Pythonia varten. Emme ehkä ymmärrä
+          laajennuksien merkitystä kattavasti ihan vielä, mutta ajan kanssa ne
+          tekevät koodamisesta huomattavasti vaivattomampaa. Ohjeet laajennuksen
+          asentamiseen:
+        </p>
+        <ol>
+          <li>Käynnistä Visual Studio Code</li>
+          <li>
+            Valitse vasemman laidan työkalupalkista
+            <img src="./extensions.PNG" alt="Extensions" /> eli
+            <b>"Extensions"</b>. Pikanäppäinkomento tähän olisi
+            <kbd><kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>X</kbd></kbd>
+          </li>
+          <li>Kirjoita hakukenttään <b>"Python"</b></li>
+          <li>
+            Valitse ensimmäinen tulos:
+            <img src="./extension_oikea.PNG" alt="Oikea laajennos" />
+          </li>
+          <li>Paina <b>Install</b></li>
+        </ol>
+        <div class="mt-4">
+          <p>Miten meni?</p>
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="laajennos"
+          />
+          <label class="form-check-label" for="laajennos">
+            <strong> Laajennos tekstieditoriin asennettu </strong>
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./toiminta.js"></script>
+  </body>
+</html>

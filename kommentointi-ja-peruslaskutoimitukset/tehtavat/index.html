@@ -1,0 +1,278 @@
+<!-- Kommentointi ja peruslaskutoimitukset - Tehtävät -->
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/vs2015.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="tyylit.css" />
+    <title>Ohjelmoinnin perusteet - valmistelut</title>
+  </head>
+  <body>
+    <!-- Navigaatio -->
+    <!-- Navigaatio "kotimerkki" -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-house-door-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+            />
+          </svg>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Elementit navbarissa vasemmalla-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav me-auto">
+            <a class="nav-link" href="../../valmistelut/">Valmistelut</a>
+            <a class="nav-link" href="../../muuttujat-ja-tulostaminen/"
+              >Muuttujat ja tulostaminen</a
+            >
+            <!-- Tässä ollaan -->
+            <a class="nav-link active" href="#"
+              >Kommentointi ja peruslaskutoimitukset</a
+            >
+            <a class="nav-link" href="../../ehtolauseet-ja-silmukat/"
+              >Ehtolauseet ja silmukat</a
+            >
+            <a class="nav-link" href="../../funktiot/">Funktiot</a>
+          </div>
+          <!--Navbar oikealla puolella olevat elementit-->
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="../../harjoituksia/">Harjoituksia</a>
+            <a class="nav-link" href="../../info/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-info-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                />
+                <path
+                  d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                />
+              </svg>
+            </a>
+            <a class="nav-link" href="../../../en/operations/tasks/">eng</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Varsinainen tekstisisältö-->
+    <div class="container">
+      <div class="text-center mt-3">
+        <h1>Kommentointi ja peruslaskutoimitukset</h1>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="../">Teoria</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Tehtävät</a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+      <div>
+        <h2>
+          <del>Tehtävä 1 - Peruslaskutoimitukset haltuun</del>
+          <span>kesken</span>
+        </h2>
+        <p>Esitä seuraavat peruslaskutoimitukset Python-kielellä:</p>
+        <p><b>Vinkki:</b> muista laskusäännöt!</p>
+        <div>
+          <div class="row g-3 align-items-center">
+            <div class="col-auto">
+              <label for="inputPassword6" class="col-form-label"
+                >7<sup>2</sup></label
+              >
+            </div>
+            <div class="col-auto">
+              <input
+                type="text"
+                id="inputPassword6"
+                class="form-control"
+                aria-describedby="passwordHelpInline"
+                maxlength="4"
+                style="width: 4em"
+              />
+            </div>
+          </div>
+          <div class="row g-3 align-items-center mt-1">
+            <div class="col-auto">
+              <label for="inputPassword6" class="col-form-label"
+                >1&frasl;2</label
+              >
+            </div>
+            <div class="col-auto">
+              <input
+                type="text"
+                id="inputPassword6"
+                class="form-control"
+                aria-describedby="passwordHelpInline"
+                maxlength="4"
+                style="width: 4em"
+              />
+            </div>
+          </div>
+          <div class="row g-3 align-items-center mt-1">
+            <div class="col-auto">
+              <label for="inputPassword6" class="col-form-label"
+                >3&#215;10</label
+              >
+            </div>
+            <div class="col-auto">
+              <input
+                type="text"
+                id="inputPassword6"
+                class="form-control"
+                aria-describedby="passwordHelpInline"
+                maxlength="4"
+                style="width: 4em"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h2>Tehtävä 2 - Merkkijonojen operaatiot</h2>
+        <p>
+          Kopioi alla oleva koodi tekstieditoriisi ja suorita kommentoidut
+          tehtävänannot. Tehtävänäsi on siis hyödyntää Pythonin valmiita
+          funktioita merkkijonojen käsittelyssä. Ensimmäiselle riville on
+          kommentoitu linkki Pythonin-dokumentaatioon, josta löytyy selostus
+          kaikkien sisäänrakennettujen funktioiden toiminnasta.
+        </p>
+        <pre class="language-python">
+            <code># Avuksi: https://docs.python.org/3/library/stdtypes.html#string-methods
+# Tulosta myös KAIKKI lopputulokset, jotta näät mitä funktiot tekevät.
+# Hyödynnä kaikissa tehtävissä Pythonin valmiita funktioita!
+
+merkkijono = "kasanova"
+# 1. Muuta ensimmäinen merkki isoksi
+
+merkkijono2= "kiloKauppa"
+# 2. Tarkista ovatko kaikki kirjaimet pieniä
+
+merkkijono3 = "monte kriston kreivi"
+# 3. Tee merkkijonosta "Title" eli aseta jokaisen sanan ensimmäinen kirjain isoksi
+
+merkkijono4 = "kissa,koira,hevonen,kilpikonna,elefantti,krokotiili"
+# 4. Jaa merkkijono pilkkujen kohdalta
+
+merkkijono5 = "     karkki    "
+# 5. Poista tyhjät merkit alusta ja lopusta
+
+merkkijono6 = "Hei Minun Nimeni On BRITA"
+# Käännä isot ja pienet merkit päittäin
+
+merkkijono7 = "Minä pidän erityisen paljon jääkiekosta"
+# Vaihda "jääkiekosta" -> "jalkapallosta"</code>
+          </pre>
+        <div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="vastaus2_button"
+            onclick="naytaVastaus2()"
+          >
+            Näytä esimerkkivastaus
+          </button>
+          <pre class="language-python" id="vastaus2">
+            <code>merkkijono = "kasanova"
+# 1. Muuta ensimmäinen merkki isoksi
+muokattu = merkkijono.capitalize()
+print(muokattu)
+
+merkkijono2= "kiloKauppa"
+# 2. Tarkista ovatko kaikki kirjaimet pieniä
+tarkistus = merkkijono2.islower()
+print(tarkistus)
+
+merkkijono3 = "monte kriston kreivi"
+# 3. Tee merkkijonosta "Title" eli aseta jokaisen sanan ensimmäinen kirjain isoksi
+otsikoitu = merkkijono3.title()
+print(otsikoitu)
+
+merkkijono4 = "kissa,koira,hevonen,kilpikonna,elefantti,krokotiili"
+# 4. Jaa merkkijono pilkkujen kohdalta
+jaettu = merkkijono4.split(",")
+print(jaettu)
+
+merkkijono5 = "     karkki    "
+# 5. Poista tyhjät merkit alusta ja lopusta
+trimmattu = merkkijono5.strip()
+print(trimmattu)
+
+merkkijono6 = "Hei Minun Nimeni On BRITA"
+# Käännä isot ja pienet merkit päittäin
+kaannetty = merkkijono6.swapcase()
+print(kaannetty)
+
+merkkijono7 = "Minä pidän erityisen paljon jääkiekosta"
+# Vaihda "jääkiekosta" -> "jalkapallosta"
+vaihdettu = merkkijono7.replace("jääkiekosta", "jalkapallosta")
+print(vaihdettu)</code>
+          </pre>
+        </div>
+      </div>
+      <div class="mt-4 mb-4">
+        <h2>Tehtävä 3 - Kommentoi</h2>
+        <p>
+          Toivottavasti kommentoit jo kaiken. Jos et, niin kommentoi kaikki
+          tehtävissä kirjoittamasi koodi. Ota tästä myös hyvä tapa jatkoa
+          varten, ohjelmointiurakka helpottuu huomattavasti!
+        </p>
+      </div>
+    </div>
+
+    <script src="./toiminta.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

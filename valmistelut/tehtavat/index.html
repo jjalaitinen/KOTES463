@@ -1,0 +1,365 @@
+<!-- Valmistelut - Tehtävät -->
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="tyylit.css" />
+    <title>Ohjelmoinnin perusteet - valmistelut</title>
+  </head>
+  <body>
+    <!-- Navigaatio -->
+    <!-- Navigaatio "kotimerkki" -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-house-door-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+            />
+          </svg>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Elementit navbarissa vasemmalla-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav me-auto">
+            <!-- Tässä ollaan -->
+            <a class="nav-link active" href="#">Valmistelut</a>
+            <a class="nav-link" href="../../muuttujat-ja-tulostaminen/"
+              >Muuttujat ja tulostaminen</a
+            >
+            <a
+              class="nav-link"
+              href="../../kommentointi-ja-peruslaskutoimitukset/"
+              >Kommentointi ja peruslaskutoimitukset</a
+            >
+            <a class="nav-link" href="../../ehtolauseet-ja-silmukat/"
+              >Ehtolauseet ja silmukat</a
+            >
+            <a class="nav-link" href="../../funktiot/">Funktiot</a>
+          </div>
+          <!--Navbar oikealla puolella olevat elementit-->
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="../../harjoituksia/">Harjoituksia</a>
+            <a class="nav-link" href="../../info/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-info-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                />
+                <path
+                  d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                />
+              </svg>
+            </a>
+            <a class="nav-link" href="../../../en/get-started/tasks/">eng</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Varsinainen tekstisisältö-->
+    <div class="container">
+      <div class="text-center mt-3">
+        <h1>Valmistelut</h1>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="../">Teoria</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="./tehtavat/"
+              tabindex="-1"
+              aria-disabled="true"
+              >Tehtävät</a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+      <div>
+        <h2>Tehtävä 1 - Ensimmäisen Python-projektin luominen</h2>
+        <p>
+          Katso seuraava video ja alusta itsellesi ensimmäinen Python-projekti
+          VS-Codessa.
+        </p>
+        <div class="embed-responsive embed-responsive-16by9">
+          <iframe
+            class="embed-responsive-item"
+            src="https://www.youtube.com/embed/RZJDdYg_Z70"
+          ></iframe>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h2>
+          Tehtävä 2 - "Hei Maailma!" -ohjelma VS-Codessa ja sen modaaminen
+        </h2>
+        <p>
+          Muistatko etusivun trinket.io -tehtävän. Python-ohjelma tulosti
+          oletuksena konsoliin <kbd>Hello world!</kbd> ja opimme ehkä muuttamaan
+          tulostusta. Lopputuloksena konsoliin tulostui oma nimi. Trinket.io on
+          selaimeen upotettava Python-kääntäjä, mutta asennettuamme
+          Python-tulkin ja tekstieditorin koneellemme, voimme unohtaa
+          selainpohjaiset kääntäjät. Kirjoita siis Visual Studio Codessa
+          ohjelma, joka tulostaa konsoliin <b>oman nimesi</b> ja
+          <b>päivämäärän</b>.
+        </p>
+      </div>
+      <div class="mt-4">
+        <h2>Tehtävä 3 - Algoritmiseen ajatteluun virittäytyminen</h2>
+        <p>
+          Tämän tehtävän voi tehdä kynällä ja paperilla. Ihan kokonaan
+          <b>ilman tietokonetta</b>. Teorian puolella sivusimme
+          ohjelmoinnillista ajattelua ja algoritmeja. Vaikka koodaaminen onkin
+          käytännössä näppäimistön painelua, on hyvä ajatella ohjelmointiurakkaa
+          kokonaisuudessaan ajatustyönä. Niinpä tarkoituksenasi on kirjoittaa
+          tarkka, <i>mahdollisimman</i> yksiselitteinen algoritmi reitin
+          kulkemista varten. Reitti voi olla minkälainen tahansa, esimerkiksi
+          matka kotoa lähikauppaan.
+        </p>
+        <div>
+          Esimerkki:
+          <pre>
+            <code>
+1. Nouse seisomaan
+2. Kävele eteiseen
+  2.1 Jos matkalla on ovi, niin avaa se ja kulje siitä läpi
+3. Pue kengät
+4. Tarkista sää
+  4.1 Jos on kylmä -> pue takki
+  4.2 Jos on viileä -> pue huppari
+5. Avaa ulko-ovi
+...</code>
+          </pre>
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="naytaVastausButton"
+            onclick="nayta()"
+          >
+            Näytä vastaus
+          </button>
+          <div class="mt-2" id="vastaus3">
+            Minkälainen tuotos syntyi? Onko Algoritmi edelleenkään tarpeeksi
+            tarkka? Entä jos matkalla sattuu olemaan vaikkapa työmaa,
+            vaikuttaako tämä algoritmin toimintaan? Tai miten varautua muihin
+            liikenteessä oleviin muuttujiin (autot, pyöräilijät, muut
+            kävelijät)? Näiden ongelmien kanssa ohjelmoinnissa joutuu
+            kikkailemaan. Tarkan, yksiselitteisen algoritmin tekeminen ei ole
+            helppoa.
+          </div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h2>Tehtävä 4 - Monivalinta</h2>
+        <p>
+          Ensin hieman ajatuksia monivalintatehtävistä. Monivalintatehtävät
+          eivät ehkä ole paras tapa mitata opittua tietotaitoa, mutta
+          vastaisuudessa, kun etenet materiaalissa eteenpäin tulet aika ajoin
+          törmäämään monivalintatehtäviin, joilla opittua tietoa kartutetaan. On
+          siis hyvä jo heti aluksi käydä läpi, millaiselta lomake näyttää.
+        </p>
+        <p>
+          Jokaiseen kysymykseen tulisi pystyä vastaamaan teorian ja edellisten
+          tehtävien perusteella. Valitse oikeat vaihtoehdot ja paina
+          <b>"Tarkista"</b>
+        </p>
+        <ol>
+          <li>Mitä tarkoittaa ohjelmoinnillinen ajattelu?</li>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys1"
+              id="eka_eka"
+              value="vaarin"
+            />
+            <label class="form-check-label" for="eka_eka">
+              Ainoastaan teknistä koodaamista
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys1"
+              id="eka_toka"
+              value="vaarin"
+            />
+            <label class="form-check-label" for="eka_toka">
+              Vain matemaattisesti lahjakkaiden ihmisten erikoisosaamisalue
+            </label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys1"
+              id="eka_kolmas"
+              value="oikein"
+            />
+            <label class="form-check-label" for="eka_kolmas"
+              >Ymmärrystä laajentaa ajatteluaan niin, että asioita voidaan
+              ratkaista ohjelmointia hyödyntämällä</label
+            >
+          </div>
+          <li>Mikä on Visual Studio Code?</li>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys2"
+              id="toka_eka"
+              value="oikein"
+            />
+            <label class="form-check-label" for="toka_eka">Tekstieditori</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys2"
+              id="toka_toka"
+              value="vaarin"
+            />
+            <label class="form-check-label" for="toka_toka"
+              >Ohjelmointikieli</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys2"
+              id="toka_kolmas"
+              value="oikein"
+            />
+            <label class="form-check-label" for="toka_kolmas">Videopeli</label>
+          </div>
+          <li>Ohjelmakoodia voi kirjoittaa vaikka liitutaululle?</li>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys3"
+              id="kolmas_eka"
+              value="vaarin"
+            />
+            <label class="form-check-label" for="kolmas_eka"
+              >Ei voi. Ainoastaan tietokoneella voi kirjoittaa
+              ohjelmakoodia</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys3"
+              id="kolmas_toka"
+              value="oikein"
+            />
+            <label class="form-check-label" for="kolmas_toka"
+              >Kyllä voi. Sitä ei vain valitettavasti pysty "ajamaan"
+              käytännössä.</label
+            >
+          </div>
+          <li>Ohjelmointi ja koodaaminen ovat synonyymeja.</li>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys4"
+              id="neljas_eka"
+              value="oikein"
+            />
+            <label class="form-check-label" for="neljas_eka"
+              >Ei tarkoita, ohjelmointi on koko ajatustyö ja koodaus ajatustyön
+              tulos.</label
+            >
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys4"
+              id="neljas_toka"
+              value="vaarin"
+            />
+            <label class="form-check-label" for="neljas_toka"
+              >Juu juu, samaa tarkoittavat. Ei mitään eroa.
+            </label>
+          </div>
+          <li>Missä ohjelmakoodia tarvitaan?</li>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys5"
+              id="viides_eka"
+              value="oikein"
+            />
+            <label class="form-check-label" for="viides_eka">Kaikkialla</label>
+          </div>
+          <div class="form-check">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="kysymys5"
+              id="viides_toka"
+              value="vaarin"
+            />
+            <label class="form-check-label" for="viides_toka">Ei missään</label>
+          </div>
+        </ol>
+      </div>
+      <div class="mb-4">
+        <button
+          class="btn btn-primary"
+          id="tarkistus_nappi"
+          onclick="tarkista()"
+        >
+          Tarkista
+        </button>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./toiminta.js"></script>
+  </body>
+</html>

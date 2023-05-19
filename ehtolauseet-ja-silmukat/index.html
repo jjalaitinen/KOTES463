@@ -1,0 +1,385 @@
+<!-- Ehtolauseet ja silmukat -->
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/vs2015.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="tyylit.css" />
+    <title>Ohjelmoinnin perusteet - ehtolauseet ja silmukat</title>
+  </head>
+  <body>
+    <!-- Navigaatio -->
+    <!-- Navigaatio "kotimerkki" -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-house-door-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+            />
+          </svg>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Elementit navbarissa vasemmalla-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav me-auto">
+            <a class="nav-link" href="../valmistelut/">Valmistelut</a>
+            <a class="nav-link" href="../muuttujat-ja-tulostaminen/"
+              >Muuttujat ja tulostaminen</a
+            >
+            <a class="nav-link" href="../kommentointi-ja-peruslaskutoimitukset/"
+              >Kommentointi ja peruslaskutoimitukset</a
+            >
+            <!-- Tässä ollaan -->
+            <a class="nav-link active" href="#">Ehtolauseet ja silmukat</a>
+            <a class="nav-link" href="../funktiot/">Funktiot</a>
+          </div>
+          <!--Navbar oikealla puolella olevat elementit-->
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="../harjoituksia/">Harjoituksia</a>
+            <a class="nav-link" href="../info/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-info-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                />
+                <path
+                  d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                />
+              </svg>
+            </a>
+            <a class="nav-link" href="../../en/if-statement-loops/">eng</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Varsinainen tekstisisältö-->
+    <div class="container">
+      <div class="text-center mt-3">
+        <h1>Ehtolauseet ja silmukat</h1>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Teoria</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./tehtavat/">Tehtävät</a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+      <div>
+        <h2>Ehtolauseet</h2>
+        <p>
+          Ehtolauseet ovat tärkeä osa ohjelmakoodia. Ilman ehtolauseita kaikki
+          ohjelmat rullaisivat aina samalla kaavalla alusta loppuun asti.
+          Kuvittele esimerkiksi, että pelaat videopeliä, jossa ei ole
+          mahdollista hävitä. Tai jos salasanaasi ei tarkistettaisi ennen
+          kirjautumista. Ehtolauseet muuttavat siis ohjelman toimintaa, niin
+          että erilaisiin tilanteisiin voidaan reagoida eri tavoin. Esimerkki
+          konkreettisesta oikeaan elämään liittyvästä ehtolauseesta voisi olla:
+        </p>
+        <p class="text-center">
+          <i> <b>jos</b> ulkona sataa vettä, <b>niin</b> laita kumisaappaat.</i>
+        </p>
+        <p>
+          Syntaksiltaan Pythonissa ehtolause eli <b>if</b>-rakenne näyttää
+          kaikessa yksinkertaisuudessaan tältä:
+        </p>
+        <pre class="w-75 language-python">
+          <code>x = 2                               # Muuttujaan "x" sijoitetaan luku 2
+if x &lt; 0:                           # Tarkistetaan onko muuttuja "x" pienempi, kuin luku 0  
+    print("luku on negatiivinen")   # Jos edellisen rivin ehto piti paikkansa, niin tulostetaan "luku on negatiivinen"</code>
+        </pre>
+        <p>
+          Jos edellisen esimerkin ehto ei toteudu, niin sisennettyä koodilohkoa
+          ei suoriteta. Toteutuessaan se taas suoritetaan. Jos taas halutaan
+          tehdä jotain ainoastaan siinä tapauksessa, että ehto ei toteudu,
+          voidaan käyttää "else"-rakennetta. Toisin sanoen ja taas oikean elämän
+          esimerkkiä hyödyntäen:
+        </p>
+        <p class="text-center">
+          <i>jos jotain, niin... <b>muuten</b> näin...</i>
+        </p>
+        <p><b>Else</b>-rakennetta käytetään Pythonissa näin:</p>
+        <pre class="w-75 language-python">
+          <code>x = 2                               # Muuttujaan "x" sijoitetaan luku 2
+if x &lt; 0:                           # Tarkistetaan onko muuttuja "x" pienempi, kuin luku 0  
+    print("luku on negatiivinen")   # Jos edellisen rivin ehto piti paikkansa, niin tulostetaan "luku on negatiivinen"
+else:                               # Jos äskeinen ehto ei pitänyt paikkaansa niin suoritetaan seuraavan rivin sisennys
+    print("luku on positiivinen")   # Tulostetaan "luku on positiivinen"</code>
+        </pre>
+        <p>
+          Lisäehtoja <i>"jossitteluun"</i> voi lisätä <b>elif</b>-rakenteella
+          <i>(else if)</i>:
+        </p>
+        <pre class="w-75 language-python">
+          <code>x = 2                               
+if x &lt; 0:                             
+    print("luku on negatiivinen")   
+elif x &gt; 0:                         
+    print("luku on positiivinen")
+else:
+    print("luku on nolla")</code>
+        </pre>
+        <p>
+          Yleensä ohjelmakoodissa ehtolauseita käytetään osana muita rakenteita,
+          jotta ohjelmakoodi osaa tehdä päätöksen siitä, mitä tehdään. Kuten
+          tulet varmasti huomaamaan if-rakenne on todella tärkeä.
+          Vertailuoperaattoreita, joilla muuttujia voi vertailla on Pythonissa
+          muutama:
+        </p>
+        <ul>
+          <li>"==" yhtä suuri kuin</li>
+          <li>"!=" eri suuri kuin</li>
+          <li>"&lt;" pienempi kuin</li>
+          <li>"&gt;" suurempi kuin</li>
+          <li>"&lt;=" pienempi tai yhtä suuri kuin</li>
+          <li>"&gt;=" suurempi tai yhtä suuri kuin</li>
+        </ul>
+        <div class="bg-light">
+          <p>
+            <b>1. Välitehtävä: </b>Tehtävänäsi on koodata ohjelma, joka kysyy
+            salasanaa käyttäjältä. Jos käyttäjä syöttää oikean salasanan,
+            hänelle tulostetaan teksti "Tervetuloa!". Jos salasana on väärin,
+            niin tulostetaan "Väärä salasana".
+            <b>Oikea salasana on "katapultti13".</b>
+          </p>
+          <details>
+            <summary>1. Välitehtävän esimerkkivastaus</summary>
+            <pre class="language-python">
+            <code>ss = input("Anna salasana: ")
+if ss == "katapultti13":
+    print("Tervetuloa!")
+else:
+    print("Salasana on väärin")</code>
+          </pre>
+          </details>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h2>Silmukat (ja lyhyt sana listoista)</h2>
+        <p>
+          Silmukat eli toistorakenteet vähentävät koodin kirjoittamista
+          huomattavasti. Lisäksi ne ovat oiva tapa käydä läpi suurempiakin
+          datamääriä. Toistorakenteella tarkoitetaan ohjelmakoodin rakennetta,
+          jossa ohjelmakoodi toistaa samaa koodinpätkää, kunnes sille asetettu
+          ehto käy toteen. Taas käytännön elämästä johdettu esimerkki:
+        </p>
+        <p class="text-center">
+          <i>
+            syödään lounasta <b>niin kauan</b>, <b>kunnes</b> maha on täynnä.</i
+          >
+        </p>
+        <h4>Listat</h4>
+        <p>
+          Listat ovat Pythonin vastine taulukoille. Etenkin kun käsittelyssämme
+          on silmukat, on oikea hetki mainita listoista, sillä listoja usein
+          käydään läpi silmukoilla. Edellisen kappaleen lopulla oli esimerkki,
+          jossa ohjelma laski listasta löytyvien alkioiden keskiarvon. Tässäkin
+          esimerkissä lista suhattiin läpi silmukkaa hyödyntäen. Pythonissa
+          lista esitellään ilmoittamalla listan alkiot hakasulkeissa:
+        </p>
+        <pre>
+          <code>juomat = ["Kahvi", "Kokis", "Tee", "Mehu"]</code>
+        </pre>
+        <p>
+          Listan alkioon pääsee käsiksi hakasulkeilla ja ilmoittamalla indeksin
+          hakasulkeiden sisään. Toisin sanoen missä kohtaa listaa alkio on.
+          Esimerkiksi: kohdasta <code>juomat[0]</code> löytyy "Kahvi". Mitä
+          löytyy paikasta <code>juomat[2]</code>?
+          <b>MUISTA taulukon indeksointi alkaa Pythonissa aina nollasta!</b>
+        </p>
+        <p>
+          Listoille on myös paljon erilaisia <b>metodeja</b>, aivan kuten
+          merkkijonoillekin. Voisikin ajatella, että merkkijonotkin ovat kuin
+          listoja merkeistä, joissa jokainen merkki on yksi listan alkio.
+          Esimerkkejä listoihin liittyvistä metodeista:
+        </p>
+        <ul>
+          <li>.append(alkio) = Lisää alkion listan loppuun</li>
+          <li>.remove(alkio) = Poistaa alkion listasta</li>
+          <li>.reverse() = Kääntää listan toisin päin</li>
+          <li>
+            .count(alkio) = Kertoo, kuinka monta kertaa tietty alkio esiintyy
+            listassa
+          </li>
+          <li>
+            len(lista) = Palauttaa listan pituuden (kuinka monta alkiota
+            listassa on), tämä pitää ottaa johonkin muuttujaan talteen.
+          </li>
+        </ul>
+        <p>
+          <b>2. Välitehtävä:</b> Kopioi yllä esitelty "juomat"-lista
+          tekstieditoriisi. Ja 1) Lisää listaan alkio "Vesi" 2) Poista listasta
+          alkio "Kokis" 3) Tarkista kuinka monta alkiota listassa on?
+        </p>
+        <details>
+          <summary>2. Välitehtävän esimerkkivastaus</summary>
+          <pre class="language-python">
+          <code>juomat = ["Kahvi", "Kokis", "Tee", "Mehu"]
+
+# Luodaan uusi muuttuja, jonka arvona on "Vesi"
+lisattava = "Vesi"
+# Lisätään muuttuja uudeksi alkioksi listaan
+juomat.append(lisattava)
+
+# Poistetaan listasta "Kokis"
+juomat.remove("Kokis")
+
+# Otetaan alkioiden määrä talteen uuteen muuttujaan
+alkioiden_maara = len(juomat)
+
+print(alkioiden_maara) # 4 (Tulostetaan alkioiden määrä)
+print(juomat) # ['Kahvi', 'Tee', 'Mehu', 'Vesi'] (Tulostetaan listan sisältö)</code>
+        </pre>
+        </details>
+
+        <h4 class="mt-4">For-silmukka</h4>
+        <p>
+          For-silmukka on yksi Pythonin silmukkarakenteista. For-silmukka on
+          erityisen käytännöllinen silloin, kun tarkoituksena on käydä läpi
+          listaa ja sen alkioita yksi kerrallaan. Alla olevassa esimerkkissä on
+          luotu kymmenen alkion mittainen lista, joka sisältää luvut 1-10.
+          Silmukka käy alkiot läpi yksi kerrallaan ja tulostaa
+        </p>
+        <pre class="language-python">
+          <code>numerotaulukko = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+for numero in numerotaulukko:
+    print(numero)</code>
+        </pre>
+        <p>
+          Ymmärrätkö miten for-silmukka toimii? Kokeile "vipeltää" aikaisemmin
+          luodun
+          <code>juomat = ['Kahvi', 'Tee', 'Mehu', 'Vesi']</code> -listan läpi ja
+          tulostaa jokainen alkio yksi kerrallaan.
+        </p>
+        <h4>Range-silmukka</h4>
+        <p>
+          Range-silmukka on myös erittäin käytännöllinen silmukka-rakenne. Se
+          toimii lähes samalla periaatteella kuin for-silmukka.
+          <code>range()</code> -funktioon on kuitenkin mahdollista etukäteen
+          ilmoittaa, kuinka monta kierrosta silmukassa pyöritään. Alla oleva
+          esimerkki tulostaa luvut 1-10:
+        </p>
+        <pre class="language-python">
+          <code>for x in range(10):
+    print(x)</code>
+        </pre>
+        <p>
+          Pääsetkö jyvälle? <code>range()</code>-funktio voi ottaa sisäänsä myös
+          3 argumenttia, missä argumentit toimivat näin: range(alku, loppu,
+          väli). Esimerkiksi <code> range(0, 10, 3)</code>, mikä tulostaisi
+          <kbd>0 3 6 9</kbd>. <b>Kokeile</b> tulostaa
+          <code>range()</code>-silmukkaa hyödyntäen joka kymmenes luku välillä
+          0-100.
+        </p>
+        <h4>While-silmukka</h4>
+        <p>
+          While-silmukka on mahdollisesti kaikistä yleisin silmukka-rakenne ja
+          vastaavanlainen toiminnallisuus löytyy kielestä, kuin kielestä.
+          While-silmukan logiikka perustuu siihen, että ohjelma pyörii
+          silmukassa siihen asti, kunnes while-avainsanan jälkeinen ehto ei enää
+          ole <b>tosi</b> <small>(True)</small>. Alla esimerkki:
+        </p>
+        <pre class="language-python">
+          <code>askel = 0            
+while askel &lt; 10:
+    print(askel)
+    askel += 1 # Tämä on sama asia, kuin askel = askel + 1</code>
+        </pre>
+        <p>
+          Huomaat varmaan, että askel-muuttujaa pitää kokoajan korottaa, jotta
+          saavutamme joskus ehdon ja teemme siitä epätotta (<code
+            >askel &lt; 10</code
+          >). Eli, kun askel-muuttujan arvo saavuttaa luvun 10, ei
+          while-avainsanan jälkeinen ehto enää pidä paikkaansa ja silmukan
+          suoritus loppuu. Jos koodin viimeistä riviä <code>askel += 1</code> ei
+          olisi, niin ohjelma tulostaisi lukua <kbd>0</kbd> loputtomasti.
+          Kyseessä olisi niin kutsuttu ikuinen silmukka.
+        </p>
+        <p>
+          While-silmukka on erittäin hyödyllinen apuväline, kun sitä oppii
+          käyttämään. Kun emme ennalta tiedä, kuinka monta kertaa jokin asia
+          tulee tehdä, on while-silmukka tässä kohtaa ainut vaihtoehto.
+        </p>
+        <h4>"break" ja "continue"</h4>
+        <p>
+          <b>break</b> ja <b>continue</b> käskyillä voimme ohjailla silmukan
+          käyttäytymistä. <b>break</b>-käsky nimensä mukaisesti poistuu
+          silmukasta, kun taas <b>continue</b>:lla voimme siirtyä silmukassa
+          seuraavalle "kierrokselle". Alla olevassa esimerkissä on kaksi
+          ohjelmaa, jotka auttavat avaamaan, miten käskyt toimivat Pythonissa:
+        </p>
+        <pre>
+          <code># Ohjelma tulostaa parittomat luvut alueella 1-10
+askel = 0            
+while askel &lt 10:
+    askel += 1
+    if askel % 2 == 0: # Tarkistetaan onko luku parillinen
+        continue # Jos on niin siirrytään seuraavalle kierrokselle
+    else:
+        print(askel) # Tulostetaan luku
+
+
+# Ohjelma tulostaa luvut alueella 1-5. Huomaatko miksi luku 5 ei tulostu?
+for luku in range(10):
+    if luku == 5: # Tarkistetaan onko luku 5
+        break # Jos edellinen piti paikkansa, niin poistutaan ohjelmasta
+    print(luku)</code>
+        </pre>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

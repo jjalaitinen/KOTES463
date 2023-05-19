@@ -1,0 +1,351 @@
+<!-- Muuttujat ja tulostaminen -->
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/vs2015.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="tyylit.css" />
+    <title>Ohjelmoinnin perusteet - muuttujat ja tulostaminen</title>
+  </head>
+  <body>
+    <!-- Navigaatio -->
+    <!-- Navigaatio "kotimerkki" -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-house-door-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+            />
+          </svg>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Elementit navbarissa vasemmalla-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav me-auto">
+            <a class="nav-link" href="../valmistelut/">Valmistelut</a>
+            <!-- Tässä ollaan -->
+            <a class="nav-link active" href="#">Muuttujat ja tulostaminen</a>
+            <a class="nav-link" href="../kommentointi-ja-peruslaskutoimitukset/"
+              >Kommentointi ja peruslaskutoimitukset</a
+            >
+            <a class="nav-link" href="../ehtolauseet-ja-silmukat/"
+              >Ehtolauseet ja silmukat</a
+            >
+            <a class="nav-link" href="../funktiot/">Funktiot</a>
+          </div>
+          <!--Navbar oikealla puolella olevat elementit-->
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="../harjoituksia/">Harjoituksia</a>
+            <a class="nav-link" href="../info/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-info-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                />
+                <path
+                  d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                />
+              </svg>
+            </a>
+            <a class="nav-link" href="../../en/variables/">eng</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Varsinainen tekstisisältö-->
+    <div class="container">
+      <div class="text-center mt-3">
+        <h1>Muuttujat ja tulostaminen</h1>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Teoria</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./tehtavat/">Tehtävät</a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+      <div>
+        <h2>Mitä tulostaminen oikeasti tarkoittaa?</h2>
+        <p>
+          Opimme viime luvussa hyödyntämään funktiota nimeltä
+          <b>"print()"</b>, kun kirjoitimme ensimmäisen Python-koodimme.
+          Funktioita käymme tarkemmin läpi, kun pääsemme materiaalissa
+          pidemmälle, mutta mitä <b>"print()"</b> itseasiassa tekee? Ja miksi
+          tulostamme?
+        </p>
+        <p>
+          Tulostus-komennolla ei tässä tapauksessa viitata vanhanliiton
+          tulostimiin, joilla printataan paperia, mutta analogia on samanlainen.
+          Loppupeleissä tietokoneohjelmien tarkoitus on tuottaa jokin
+          lopputulos, ja tulostamalla tarkoituksellinen viesti
+          <i>(esimerkiksi oma nimi ja päivämäärä)</i> olemme päässeet
+          haluamaamme lopputulokseen.
+        </p>
+
+        <figure class="figure">
+          <div class="row">
+            <div class="col">
+              <pre>
+          <code>
+print("Mikko Mallikas 11.11.2011")            
+          </code>
+        </pre>
+            </div>
+            <div class="col">
+              <pre>
+          <code>
+Mikko Mallikas 11.11.2011            
+          </code>
+        </pre>
+            </div>
+          </div>
+          <figcaption class="figure-caption">
+            Kun koodimme näyttää samalta, kuin vasemmalla. Tuloste on
+            samanlainen, kuin oikealla.
+          </figcaption>
+        </figure>
+        <p>
+          <b>1. Välitehtävä:</b>
+          Ohjelma on kuitenkin melko vielä melko yksinkertainen ja hölmö. Mieti,
+          mitä tapahtuu jos ohjelmaasi käyttää <b>joku muu</b> ja vielä
+          <b>eri päivänä</b>?
+        </p>
+        <details>
+          <summary>1. Välitehtävän vastaus</summary>
+          <p>
+            Esimerkiksi jos käyttäjän nimi onkin Matti Meikäläinen ja ohjelmaa
+            ajetaan päivämääränä 30.12.2020, tulostaa ohjelma silti "Mikko
+            Mallikas 11.11.2011". Pitäisi siis onnistua selvittämään 1) kuka
+            ohjelmaa käyttää? ja 2) mikä päivä tänään on?
+          </p>
+        </details>
+        <h2>Käyttäjän syötteen lukeminen</h2>
+        <p>
+          Eli on tärkeää oppia lukemaan käyttäjän antamaa syötettä ja toimia sen
+          perusteella tuotaaksemme oikean lopputuloksen. Käskyjä ja syötettä voi
+          käyttäjältä kysyä monella tavalla, kuten painikkeiden tai
+          valintaruutujen avulla. Nyt pureudumme käyttäjän
+          <b>kirjoittamaan</b>
+          syötteeseen. Pythonissa käyttäjän syötettä luetaan komentoriviltä
+          <b>input()</b> -funktiolla. Input-funktio ottaa kiinni käyttäjän
+          syötteen ja seuraavaksi se tulee tallettaa johonkin. Tässä kohtaa
+          mukaan tulee muuttujat, joita käsittelemme kohta tarkemmin. Alla on
+          kuitenkin esimerkki input() -funktion käytöstä.
+        </p>
+        <figure class="figure">
+          <div class="row">
+            <div class="col d-flex align-self-center justify-content-center">
+              <img
+                src="./syote_koodi_nimi.PNG"
+                class="figure-img img-fluid rounded"
+                alt="Nimen_kysyminen"
+              />
+            </div>
+            <div class="col">
+              <img
+                src="./cmd_nimi.gif"
+                class="figure-img img-fluid rounded ml-0"
+                alt="Cmd_nimen_kysyminen"
+              />
+            </div>
+          </div>
+          <figcaption class="figure-caption">
+            input()-funktion sulkeiden sisään voi kirjoittaa tekstiä, jolla
+            käyttäjää ohjataan muokaamaan omaa syötettään. Syöte talletetaan
+            muuttujaan "nimi".
+          </figcaption>
+        </figure>
+      </div>
+      <div class="bg-light">
+        <p>
+          <b>2. Välitehtävä</b>: Kopioi alla oleva koodi tekstieditoriisi ja
+          kokeile ajaa koodi. Muuta myös koodia sitä siten, että käyttäjältä
+          kysytäänkin hänen nimensä sijaan <b>lempiruoka</b> ja tulostetaan se
+          konsoliin.
+        </p>
+        <pre>
+          <code>
+nimi = input("Moi, mikä sinun nimesi on? ")
+print("Tervetuloa " + nimi)            
+          </code>
+        </pre>
+        <details>
+          <summary>2. Välitehtävän vastaus</summary>
+          <p>
+            Käyttäjän lempiruokaa voitaisiin kysyä esimerkiksi tällä tavalla:
+          </p>
+          <pre>
+            <code>
+ruoka = input("Moi, mikä sinun lempiruokasi on? ")
+print("Lempiruokasi on " + ruoka)                 
+            </code>
+          </pre>
+          <p>
+            "ruoka" -nimiseen muuttujaan siis talletetaan käyttäjän syötettä ja
+            käyttäjän syöte liimataan print tulostukseen "Lempiruokasi on " -
+            jälkeen. Huomaa, että jos käyttäjä syöttäisi ohjelmalle esimerkiksi
+            merkkijonon "saippuakauppias", lopputulos olisi "Lempiruokasi on
+            saippuakauppias". Pyrimme siis vain toistaiseksi ohjailemaan
+            käyttäjän syötettä oikeaan suuntaan. Emme voi tarkistaa ja
+            filtteröidä syötettä kunnolla, ennen kuin tutustumme ehtolauseisiin.
+          </p>
+        </details>
+      </div>
+      <div class="mt-3">
+        <h2>Muuttujia</h2>
+        <p>
+          Äskeisen välitehtävän jälkeen oletkin jo päässyt hyödyntämään
+          muuttujia ohjelmoinnissa. Välitehtävässä talletimme muuttujaan
+          käyttäjän syötettä <b>merkkijonona</b>. Python-kielen tärkeimpiä
+          tietotyyppejä ovat:
+        </p>
+        <ul>
+          <li>Merkkijonot = string <i>("kissa", "k", "uuvatti123", ...)</i></li>
+          <li>Kokonaisluvut = int <i>(-1, 0, 145, ...)</i></li>
+          <li>
+            Liukuluvut (ts. desimaaliluvut) = double
+            <i>(2.5, 3.1, 0.1, -1.93, ...)</i>
+          </li>
+          <li>Totuusarvo = boolean <i>(True tai False)</i></li>
+        </ul>
+        <p>
+          Muuttujia käytetään ohjelmoinnissa "muistipaikkana", jonne ohjelmassa
+          voidaan tallettaa tietoa tulevaa käyttöä varten. Muuttujaan
+          talletetaan aina tietyn tyyppistä dataa. Erilaiset tietotyypit on
+          listattuna ylempänä. Muuttujalle annetaan aina nimi ja arvo.
+          Esimerkiksi <b>x = 10</b>, jossa "x" on muuttujan nimi ja "10" on
+          muuttujan arvo.
+        </p>
+        <p>
+          Muuttujan nimellä ei ole väliä, mutta jotta ohjelmakoodi olisi
+          helpommin ymmärrettävää itse koodarille, kuin myös muillekin,
+          kannattaa yleensä nimetä muuttujia jotenkin järkevästi. Esimerkiksi
+          kokonaisluvulle ei ehkä kannata antaa muuttujanimeä "norsu", kuten
+          alhaalla, vaan esimerkiksi jos kyseessä on norsujen lukumäärä, olisi
+          yksi hyvä vaihtoehto muuttujanimeksi esimerkiksi "norsu_lkm" tai
+          "norsu_maara". Ainut asia, mikä nimeämisessä tulee huomioida on se,
+          että samannimisiä muuttujia ei voi olla. Jos ohjelmassa on
+          samannimisiä muuttujia, ymmärtää ohjelma sen uudelleen sijoittamisena
+          (kts. alempi esimerkki). Muuttujan nimi ei myöskään voi olla
+          kaksiosainen, esimerkiksi "norsujen lukumäärä", vaan kaksiosaiset
+          nimet tulee yhdistää esimerkiksi "_"-merkillä
+          (<i>alaviiva-merkki</i>).
+        </p>
+        <p>
+          <b>HUOM!!</b> Kannattaa jo nyt tottua siihen, että ääkköset
+          tietokonemaailmassa voivat tuottaa todella usein vaikeuksia. Siksi
+          vahva suosittelu siihen, että muuttujiakin nimetään ilman ääkkösiä,
+          esimerkiksi "henkilön_ikä" -> "henkilon_ika".
+        </p>
+        <pre>
+          <code>
+a = 1        # Muuttujaan nimeltä "a" on sijoitettu kokonaisluku 1 
+b = 2.5      # Muuttujaan nimeltä "b" on sijoitettu liukuluku 2.5
+c = "teksti" # Muuttujaan "c" on sijoitettu merkkijono "teksti"
+norsu = 3    # Muuttujaan nimeltä "norsu" on sijoitettu kokonaisluku 3
+d = True     # Muuttujaan "d" on sijoitettu totuusarvo True 
+a = 3        # Nyt muuttujaan nimeltä "a" sijoitetaankin luku 3, joten aikaisemmin sijoitettu 1 menettää merkityksensä             
+          </code>
+        </pre>
+        <p>
+          Muuttujia voidaan tietysti muuttaa, mistä niiden nimi juontuukin.
+          Edellä olevassa esimerkissä demottiin tilannetta, jossa ennestään
+          nimetylle muuttujalle asetettiin uusi arvo, muuttujassa "a". Muuttujia
+          voi myös yhdistellä ja niitä voi muokata mielensä mukaan.
+          Peruslaskutoimituksia tullaan käymään tarkemmin seuraavassa
+          kappaleessa.
+        </p>
+        <pre>
+          <code>
+luku = 10                                       # Muuttujaan nimeltä "luku" on sijoitettu kokonaisluku 10
+toinen_luku = 5                                 # Muuttujaan nimeltä "toinen_luku" sijoitetaan kokonaisluku 5
+merkkijono = "koira"                            # Muuttujaan nimeltä "merkkijono" sijoitetaan "koira"
+summa = luku + toinen_luku                      # Muuttujaan nimeltä "summa" sijoitetaan muuttujat "luku" ja "toinen_luku" ja lasketaan ne yhteen
+luku = 10 + 1 - 8                               # Tässä muuttujassa tehdään myös laskutoimitus
+uusi_merkkijono = merkkijono + " " + "kissa"    # Muuttujassa nimeltä "uusi_merkkijono" yhdistellään merkkijonoja
+          </code>
+        </pre>
+        <p>
+          <b>3. Välitehtävä:</b> Kopioi alla oleva koodi tekstieditoriisi ja
+          kokeile muuttaa muuttujien arvoja. Mieti myös, miksi
+          <b>"#"</b>-alkuiset rivit eivät vaikuta ohjelman suorittamiseen.
+        </p>
+        <pre>
+          <code>
+# Tehdään kaksi lukumuuttujaa, "luku1" ja "luku2"            
+luku1 = 5
+luku2 = 3
+# Lasketan muuttujat yhteen ja sijoitetaan muuttujaan "summa"
+summa = luku1 + luku2
+# Tulostetaan muuttuja "summa"
+print(summa)
+
+
+# Luodaan kaksi muuttujaa "eka" ja "toka"
+eka = "ele"
+toka = "fantti"
+
+# Tulostetaan molemmat muuttujat peräkkäin, liimaten ne yhteen. 
+print(eka + toka)
+
+          </code>
+        </pre>
+      </div>
+    </div>
+
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,409 @@
+<!-- Kommentointi ja peruslaskutoimitukset -->
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/vs2015.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="tyylit.css" />
+    <title>Ohjelmoinnin perusteet - valmistelut</title>
+  </head>
+  <body>
+    <!-- Navigaatio -->
+    <!-- Navigaatio "kotimerkki" -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-house-door-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+            />
+          </svg>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Elementit navbarissa vasemmalla-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav me-auto">
+            <a class="nav-link" href="../valmistelut/">Valmistelut</a>
+
+            <a class="nav-link" href="../muuttujat-ja-tulostaminen/"
+              >Muuttujat ja tulostaminen</a
+            >
+            <!-- Tässä ollaan -->
+            <a class="nav-link active" href="#"
+              >Kommentointi ja peruslaskutoimitukset</a
+            >
+            <a class="nav-link" href="../ehtolauseet-ja-silmukat/"
+              >Ehtolauseet ja silmukat</a
+            >
+            <a class="nav-link" href="../funktiot/">Funktiot</a>
+          </div>
+          <!--Navbar oikealla puolella olevat elementit-->
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="../harjoituksia/">Harjoituksia</a>
+            <a class="nav-link" href="../info/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-info-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                />
+                <path
+                  d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                />
+              </svg>
+            </a>
+            <a class="nav-link" href="../../en/operations/">eng</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Varsinainen tekstisisältö-->
+    <div class="container">
+      <div class="text-center mt-3">
+        <h1>Kommentointi ja peruslaskutoimitukset</h1>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Teoria</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./tehtavat/">Tehtävät</a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+      <div>
+        <h2>Peruslaskutoimituksia</h2>
+        <p>
+          Nyt, kun olemme käsitelleet muuttujia niin voimme lähteä
+          pyörittelemään näitä. Tietokoneen ollessa erityisesti todella tehokas
+          laskin on hyvä ymmärtää, mitä kaikkea voimme muuttujilla tehdä.
+          Peruslaskutoimituksista on hyvä aloittaa. Muutamaa seuraavista
+          pääsimmekin jo käyttämään...
+        </p>
+        <ul>
+          <li>Yhteenlasku = "+"</li>
+          <li>Vähennyslasku = "-"</li>
+          <li>Kertolasku = "*"</li>
+          <li>Jakolasku = "/"</li>
+          <li>Potenssilasku = "**"</li>
+          <li>Jakojäännös = "%"</li>
+        </ul>
+        <p>
+          <b>1. Välitehtävä:</b> Kopioi alla oleva koodi tekstieditoriisi ja
+          kokeile täydennä kommenttien mukaisesti.
+          <b
+            >Hyödynnä ainoastaan ennalta määriteltyjä muuttujia arvon
+            määrityksissä.</b
+          >
+          <i>
+            Esimerkiksi: luo muuttuja "luku" ja aseta sille arvoksi 3 hyödyntäen
+            ennalta määriteltyjä muuttujia
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-arrow-right-short"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"
+              />
+            </svg>
+            luku = a+a+a</i
+          >
+          Muista, että voit aina <kbd>print()</kbd>-komennolla tarkistaa
+          tulostamalla, mitä muuttuja pitää sisällään! Ja voit aina luoda
+          itsellesi uusia apumuuttujia vanhojen pohjalta.
+        </p>
+        <pre class="">
+          <code>
+a = 1
+b = 5
+c = 10
+# 1. Luo muuttuja d, jonka arvoksi tulee saada 2
+
+# 2. Luo muuttuja e, jonka arvoksi tulee saada 20
+
+# 3. Luo muuttuja f, jonka arvoksi tulee saada 45
+
+# 4. Luo muuttuja g, joka laskee muuttujan b potenssissa c
+
+# 5. Luo muuttuja h, jonka avulla voit tarkistaa onko luku 10 jaollinen viidellä (Vinkki: jos kahden luvun jakojäännös on nolla, niin luku on jaollinen tällä toisella luvulla)
+          </code>
+        </pre>
+        <details>
+          <summary><b>1. Välitehtävän vastaus</b></summary>
+          <pre>
+            <code>
+# Vastaukset 1. välitehtävään:
+
+# 1.
+d = c/b
+print(d) # &lt;- Tämä tulostaa 2.0, sillä jakolaskut tuottavat Pythonissa aina liukuluvun
+
+# 2.
+e = (a+a)*c # &lt;- Esimerkiksi, muitakin tapoja varmasti löytyy
+print(e) 
+
+# 3.
+f = (c-a)*b
+print(f)
+
+# 4.
+g = b**c
+print(g)
+
+# 5.
+h = 10%5
+print(h) # &lt;- 10 on jaollinen luvulla 5. Tätä operaattoria käytetään usein ohjelmoinnissa esimekiksi parillisten tarkastamiseen.              
+            </code>
+          </pre>
+        </details>
+        <p class="mt-4">
+          Joitakin peruslaskutoimituksia voi hyödyntää myös merkkijonoilla! Tämä
+          tekeekin Pythonista näppärän kielen. Perusoperaattorien lisäksi
+          Python-kielessä on useita merkkijonoille tarkoitettuja funktioita,
+          joilla perusoperaatiot hoituvat vikkelästi. Esimerkkitapauksia on
+          listattu alapuolelle. Harjoitellaan näitä vielä tehtävien puolella.
+          Funktioista taas puhutaan lisää "Funktiot" -kappaleessa.
+        </p>
+        <pre class="language-python">
+          <code>
+# Merkkijonoja voi "laskea yhteen" eli yhdistää "+" -operaattorilla
+alku = "ban"
+loppu = "aani"
+kokonaisuus = alku + loppu
+print(kokonaisuus) # &lt;- Tulostuu "banaani"
+
+# Merkkijonoilla voi myös "kertoa" eli toistaa
+sana = "kristo"
+toista_5kertaa = sana*5
+print(toista_5kertaa)  # &lt;- Tulostuu "kristokristokristokristokristo"
+
+# Merkkijonon merkkien muuttaminen isoiksi kirjaimiksi .upper() -metodilla
+merkkijono = "kissa"
+merkkijono = merkkijono.upper()
+print(merkkijono) # &lt;- Tulostuu "KISSA"
+
+# Takaisin pieneksi .lower() -metodilla
+merkkijono = merkkijono.lower()
+print(merkkijono) # &lt;- Tulostuu "kissa"
+
+# Asetetaan merkkijonon ensimmäinen merkki isoksi eli "kissa" -> "Kissa"
+merkkijono = merkkijono.capitalize()
+print(merkkijono) # &lt;- Tulostuu "Kissa"
+
+# Tutkitaan, kuinka monta kertaa tietty merkki esiintyy merkkijonossa
+# esim. "s" merkkijonossa "vesi hiisi sihisi hississä"
+sananlasku = "vesi hiisi sihisi hississä"
+montakertaa_s = sananlasku.count("s")
+print(montakertaa_s) # &lt;- Tulostuu 8
+
+"""
+Erilaisia metodeja merkkijonoja varten on valmiiksi todella paljon.
+Pyörää ei siis oikeasti tarvitse keksiä uudelleen vaan valmiilla paloilla kannattaa rakentaa.
+Käy tutkimassa Pythonin dokumentaatiosta (https://docs.python.org/3/library/stdtypes.html#string-methods)
+valmiita metodeja ja kokeile niiden käyttöä tekstieditorissasi.
+
+"""
+          </code>
+        </pre>
+      </div>
+      <div>
+        <h2>Kommentointi ja hyvät käytänteet koodin kirjoittamisessa</h2>
+        <p>
+          Jos teit viimekappaleessa välitehtäviä, kopioit esimerkkejä
+          tekstieditoriisi ja kokeilit ajaa koodin, huomasit varmaankin etteivät
+          <b>"#"</b>-merkillä alkavat rivit vaikuttaneet ohjelman
+          suorittamiseen. Samaa merkintää hyödynnettiin ylempänä olevassa
+          tehtävässä. Kyseessä on kommentointiin varattu merkki. Myös
+          <b>"""</b> -merkki on varattu ilmoittamaan kommentoinnista.
+          <b>Katso</b> alla oleva esimerkki ja <b>kokeile</b> omassa
+          tekstieditorissa:
+        </p>
+        <div class="d-flex justify-content-center">
+          <figure>
+            <pre class="">
+          <code>
+# Tänne voi kirjoittaa yhden rivin kommentteja
+# Tänne tulee sitten toinen rivi
+# Lisää kommentteja..
+# Lisää kommentteja..
+
+"""
+TAI
+Kommentteja 
+voi 
+kirjoittaa
+useammalle
+riville
+myös 
+näin
+"""            
+          </code>
+        </pre>
+          </figure>
+        </div>
+        <p>
+          Kommentointi on tärkeä osa ohjelmointiurakkaa.
+          <b>Hyvän ohjelmakoodin kirjoittaminen vaatii kommentteja.</b> Pienet
+          projektit on toki helppo käsittää vielä yhdellä silmäyksellä, mutta
+          mitä enemmän rivejä ohjelmaan tulee, sitä hankalammaksi sen
+          ymmärtäminen käy. Tämä on polttava puheenaihe vielä ammattilaistenkin
+          keskuudessa, sillä koodia kirjoitetaan vielä silläkin tasolla
+          huolimattomasti kehnoilla kommenteilla tai jopa kokonaan ilman
+          kommentteja.
+        </p>
+        <p>
+          Kommentti on siis sellainen ohjelmakoodin osa, jonka ohjelman suoritus
+          jättää huomioimatta, mutta jota ihmissilmä pystyy lukemaan.
+          Kommentoinnin avulla voidaan esimerkiksi kirjoittaa itselle ylös
+          muistiinpanoja siitä, mitä missäkin kohdassa tapahtuu tai mikä
+          koodissa on vaikkapa vielä kesken. Kommentointi on myös loistava tapa
+          muille, kuin itse koodarille päästä jyvälle siitä, mitä ohjelmassa on
+          tarkoitus tehdä. Kommentteja lisätään usein koodin alkuun ja varsinkin
+          niihin kohtiin joissa tapahtuu jonkinlaista toiminnallisuutta.
+        </p>
+      </div>
+      <div>
+        <h4>Hieman syntaksista ja hyvistä käytänteistä yleisesti</h4>
+        <p>
+          Python on siitä erinomainen kieli, että jos koodia ei kirjoita
+          tarpeeksi selkeästi rivittäen ja sisentäen, ohjelma ei käänny. Toisin
+          sanoen ohjelma on rikki, jos sitä ei ole kirjoitettu "nätisti".
+          Esimerkiksi C-kielessä on mahdollista koodata koko ohjelma yhdelle
+          riville, ilman että ohjelman suoritus menee sekaisin. Vertailepa
+          täysin samaa ohjelmaa kahdella eri kielellä.
+        </p>
+        <figure>
+          <div class="row">
+            <div class="col w-50">
+              <pre class="language-c">
+          <code>
+#include &lt;stdio.h&gt; 
+int main() {int i,total;int a[] = {0,6,9,2,7};int n = 5;total = 0;for(i = 0; i &lt; n; i++) {total += a[i];}printf("Average = %f\n", total/(float)n);return 0;}          
+          </code>
+        </pre>
+            </div>
+            <div class="col w-50">
+              <pre class="language-python">
+              <code>
+def main():
+    lista = [0, 6, 9, 2, 7]
+    lukumaara = 5
+    summa = 0
+    
+    for luku in lista:
+        summa = luku + summa
+    
+    print("Keskiarvo = " + str(summa/lukumaara))
+
+
+if __name__ == "__main__":
+    main()                
+              </code>
+            </pre>
+            </div>
+          </div>
+        </figure>
+        <p>
+          <b>MUISTA</b>, että hyvällä muuttujien nimeämisellä voit antaa
+          ohjelmankoodin selittää itse itseään, eikä kommenttejakaan
+          mahdollisesti tarvitse niin paljoa kirjoittaa.
+        </p>
+        <div class="bg-light">
+          <p>
+            <b>2. Välitehtävä: </b>Kommentoi koodia! Jos sinulla on
+            tekstieditorissa auki jotain koodia, niin kommentoi se. Voit myös
+            kopioida yllä olevasta "keskiarvo" -esimerkistä oikealla puolella
+            olevan Python-version ja kommentoida sitä parhaasi mukaan. Älä
+            huoli, vaikka et vielä ymmärtäisikään täysin mitä milläkin rivillä
+            tapahtuu.
+          </p>
+
+          <details class="mb-4">
+            <summary>2. välitehtävän esimerkkivastaus</summary>
+            <pre class="language-python">
+            <code>
+# Pääohjelma, joka tällä hetkellä laskee listan alkioiden keskiarvon
+def main():
+    # Alustetaan lista
+    lista = [0, 6, 9, 2, 7]
+    # Listassa on 5 alkiota
+    lukumaara = 5
+    # Summa on alussa 0, ennen kuin siihen ruvetaan lisäämään alkioiden arvoja
+    summa = 0
+    
+    # Silmukassa käydään luku kerrallaan listaa läpi
+    for luku in lista:
+        # Jokaisella kierroksella otetaan käsittelyyn yksi alkio ja sen arvo lisätään summaan
+        summa = luku + summa
+    
+    # Tulostetaan lopuksi merkkijono "Keskiarvo = " ja liimataan tähän listan alkioiden laskettu keskiarvo.
+    print("Keskiarvo = " + str(summa/lukumaara))
+
+# Suoritetaan tämä jos kyseessä ei ole "tuotu kirjasto"
+# Älä hätäänny, jos et vielä ymmärrä, mitä tämä tarkoittaa :) 
+if __name__ == "__main__":
+    main()
+            </code>
+          </pre>
+          </details>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

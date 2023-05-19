@@ -1,0 +1,319 @@
+<!-- Funktiot -->
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/vs2015.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="tyylit.css" />
+    <title>Ohjelmoinnin perusteet - funktiot</title>
+  </head>
+  <body>
+    <!-- Navigaatio -->
+    <!-- Navigaatio "kotimerkki" -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-house-door-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+            />
+          </svg>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Elementit navbarissa vasemmalla-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav me-auto">
+            <a class="nav-link" href="../valmistelut/">Valmistelut</a>
+            <a class="nav-link" href="../muuttujat-ja-tulostaminen/"
+              >Muuttujat ja tulostaminen</a
+            >
+            <a class="nav-link" href="../kommentointi-ja-peruslaskutoimitukset/"
+              >Kommentointi ja peruslaskutoimitukset</a
+            >
+            <a class="nav-link" href="../ehtolauseet-ja-silmukat/"
+              >Ehtolauseet ja silmukat</a
+            >
+            <!-- Tässä ollaan -->
+            <a class="nav-link active" href="#">Funktiot</a>
+          </div>
+          <!--Navbar oikealla puolella olevat elementit-->
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="../harjoituksia/">Harjoituksia</a>
+            <a class="nav-link" href="../info/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-info-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                />
+                <path
+                  d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                />
+              </svg>
+            </a>
+            <a class="nav-link" href="../../en/functions/">eng</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Varsinainen tekstisisältö-->
+    <div class="container">
+      <div class="text-center mt-3">
+        <h1>Funktiot</h1>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="#"
+              tabindex="-1"
+              aria-disabled="true"
+              >Teoria</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="./tehtavat/">Tehtävät</a>
+          </li>
+        </ul>
+        <hr />
+      </div>
+      <div>
+        <h2>Pääohjelma</h2>
+        <p>
+          Olemme tähän asti kirjoittaneet ohjelmakoodia vapaasti
+          tekstieditoriin. Python on osannut sen meille kääntää ja ajaa.
+          Kuitenkin jos lähdetään rakentamaan isompia kokonaisuuksia tai vaikka
+          apuohjelmia muiden käyttöön, tulee käyttää Python-ohjelman
+          perusrunkoa:
+        </p>
+        <pre>
+          <code>def main():
+    print("Hello world!")
+
+if __name__ == "__main__":
+    main()</code>
+        </pre>
+        <p>
+          Perusrunko voi olla jo tuttu jostain materiaalin koodiesimerkistä,
+          mutta käydään se vielä kerran läpi. <b>If</b>-ehto ohjelman lopussa
+          tarkistaa ensin onko ohjelmakoodimme tuotu <i>(=import)</i> osaksi
+          jotain muuta ohjelmaa. Puhutaan tästä lisää viimeisessä kappaleessa.
+          Jos ohjelma ajetaan itsenäisenä, yksittäisenä ohjelmana eikä ole osa
+          jotain muuta ohjelmaa, niin suoritetaan <b>main()</b>-funktio. Tällä
+          hetkellä main()-funktio tulostaa: "Hello world!".
+        </p>
+        <p>
+          <b>1. Välitehtävä:</b> Kokeile korjata jokin aikaisempi ohjelmakoodisi
+          noudattamaan noudattamaan Python-ohjelman perusrunkoa.
+        </p>
+      </div>
+      <div>
+        <h2>Funktiot/aliohjelmat</h2>
+        <p>
+          Python-kielessä, kuten kuten myös monessa muussakin kielessä kannattaa
+          ohjelman yhtä asiaa tekevät osaset kirjoittaa omiksi funktioikseen.
+          Funktiot parantavat koodin luettavuutta, mutta samalla myös
+          selkeyttävät ohjelmoijan ajattelua. Funktioita voi kutsua mistä
+          tahansa kohtaa ohjelmakoodia. Pythonissa uusi funktio
+          <b>esitellään</b>:
+        </p>
+        <pre class="language-python">
+          <code>def uusiFunktio():
+    # Tänne tulee funktion toiminta
+    # Päätä funktio esittely "":"-merkkiin
+    # Ja muista sisentää alle tulevat rivit</code>
+        </pre>
+        <p>Ja sitä <b>kutsutaan</b> ohjelmakoodissa:</p>
+        <pre class="language-python">
+          <code># ...            
+# Muuta koodia            
+uusiFunktio() # Jos aliohjelma "uusiFunktio()" palauttaisi jotain otettaisiin se kiinni johonkin muuttujaan esim. tulos = uusiFunktio()
+# Muuta koodia
+# ...</code>
+        </pre>
+        <p>
+          Seuraavassa esimerkissä edellinen teoria on viety käytäntöön. Molemmat
+          esimerkin aliohjelmat ottavat myös arugmentteja/parametreja mukaansa
+          eli toisin sanoen kuljettavat muuttujia paikasta toiseen. Ilman näitä
+          parametreja aliohjelmat eivät pääse käsiksi muuttujiin. Jotkin
+          aliohjelmat, kuten tässä tapauksessa aliohjelma nimeltä "tervehdi()"
+          eivät palauta mitään, eli ohjelma ei pääty <b>"return"</b>-lauseeseen.
+          "tervehdi()" -aliohjelma siis vain tervehtii sille parametrina tuotua
+          nimeä ja ohjelma on siinä. laskeYhteen() -aliohjelma taas sisältää
+          return-lauseen, joka tuo tuloksen (tässä tapauksessa kahden luvun
+          summan) takaisin sinne mistä aliohjelmaa kutsuttiin:
+        </p>
+        <pre class="language-python">
+          <code># tervehdi() -funktio saa nimen parametrina
+def tervehdi(nimi):
+    print("Morjesta päivää " + nimi + "!")
+
+# laskeYhteen() -funktio saa kaksi lukua parametrinaan
+def laskeYhteen(luku1, luku2):
+    summa = luku1 + luku2
+    return summa
+
+# Pääohjelma main(), josta aliohjelmia kutsutaan
+def main():
+    nimi = "Kaspar"
+    tervehdi(nimi)
+
+    a = 2
+    b = 3
+    summa = laskeYhteen(a, b)
+    print(summa)
+
+
+if __name__ == "__main__":
+    main()</code>
+        </pre>
+        <p>
+          <b>2. Välitehtävä:</b> Kokeile kirjoittaa Pythonin perusrunkoa
+          noudattava ohjelma, jossa kutsut pääohjelmasta itse tehtyä funktiota.
+          Tämä funktio on nimeltään "<b>kolmenSumma()</b>" ja se ottaa
+          parametrina kolme lukua. Nämä kolme lukua lasketaan aliohjelmassa
+          yhteen ja palautetaan tulos takaisin <b>return</b> -lauseella.
+          Pääohjelmassa tulos otetaan kiinni ja tulostetaan konsoliin.
+        </p>
+        <details>
+          <summary>2. välitehtävän esimerkkivastaus</summary>
+          <pre class="language-python">
+            <code># Funktio nimeltä kolmenSumma, joka laskee sille tuodut parametrit yhteen ja palauttaa tuloksen
+# Huomaa, ettei muuttujien nimillä ole mitään väliä :)
+def kolmenSumma(kissa, koira, hevonen):
+    vastaus = kissa + koira + hevonen
+    return vastaus
+
+def main():
+    eka_luku = 4
+    toka_luku = 10
+    kolmas_luku = 28
+
+    # Kutsutaan funktiota kolmenSumma() muuttujilla ja otetaan palautus kiinni muuttujaan "yhteenlaskettu_summa"
+    yhteenlaskettu_summa = kolmenSumma(eka_luku, toka_luku, kolmas_luku)
+    # Tulostetaan vastaus
+    print(yhteenlaskettu_summa)
+    
+
+if __name__ == "__main__":
+    main()</code>
+          </pre>
+        </details>
+      </div>
+      <div class="mt-4">
+        <h2>Pythonin omat funktiot ja hieman moduuleista (kirjastoista)</h2>
+        <p>
+          Olemme aikaisemmin materiaalissa huomanneet, että pythonista löytyy jo
+          <i>natiivisti</i> paljon erilaisia funktioita käsittelemään
+          esimerkiksi merkkijonoja ja taulukoita. Valmiiksi löytyvien
+          funktioiden lisäksi Pythoniin, kuten myös muihinkin ohjelmointikieliin
+          on mahdollista tuoda ulkopuolisia moduuleja ja kirjastoja. Kirjasto
+          tarkoittaa Pythonissa moduulien kokoelmaa. Pythonissa ulkopuolinen
+          moduuli tai kirjasto tuodaan mukaan kirjoittamalla ohjelmakoodin
+          alkuun <b>import</b> ja perään moduuli/kirjasto, joka halutaan tuoda.
+          Esimerkiksi satunnaisuus-moduuli voidaan tuoda osaksi Python-koodia
+          seuraavalla tavalla:
+        </p>
+        <pre class="language-python">
+          <code># Tuodaan ohjelman alussa moduuli random osaksi ohjelmaa 
+import random
+
+def main():
+    # Hyödynnetään "random"-moduulin funktiota randint ja 
+    # generoidaan satunnainen luku väliltä 1-10 otetaan se myös talteen
+    # muuttujaan "random_luku_1_viiva_10" 
+    random_luku_1_viiva_10 = random.randint(1, 10)
+    # Tulostetaan satunnainen luku
+    print(random_luku_1_viiva_10)
+
+
+if __name__ == "__main__":
+    main()</code>
+        </pre>
+        <p>
+          <b>3. Välitehtävä:</b> Kokeile tuoda moduuli nimeltä "<b>math</b>"
+          osaksi alla olevaa esimerkkikoodia ja ratkaise muuttujien <b>a</b>,
+          <b>b</b> ja <b>c</b> neliöjuuri. Vinkki:
+          <kbd>math.sqrt(muuttuja)</kbd>
+        </p>
+        <pre class="language-python">
+          <code>def main():
+    a = 9
+    b = 134
+    c = 0.78
+    
+
+if __name__ == "__main__":
+    main()</code>
+        </pre>
+        <details>
+          <summary>3. välitehtävän esimerkkivastaus</summary>
+          <pre class="language-python">
+            <code># Tuodaan "math"-moduuli import komennolla
+import math
+
+def main():
+    a = 9
+    a = math.sqrt(a) # Lasketaan muuttujan neliöjuuri math-moduulin .sqrt()-funktiolla ja tehdään uudelleensijoitus
+    print(a)
+
+    b = 134
+    b = math.sqrt(b) 
+    print(b)
+
+    c = 0.78
+    c = math.sqrt(c)
+    print(c)
+
+if __name__ == "__main__":
+    main()</code>
+          </pre>
+        </details>
+      </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

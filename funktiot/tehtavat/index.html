@@ -1,0 +1,389 @@
+<!-- Valmistelut -->
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/vs2015.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="tyylit.css" />
+    <title>Ohjelmoinnin perusteet - funktiot</title>
+  </head>
+  <body>
+    <!-- Navigaatio -->
+    <!-- Navigaatio "kotimerkki" -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../../">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-house-door-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5z"
+            />
+          </svg>
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Elementit navbarissa vasemmalla-->
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav me-auto">
+            <a class="nav-link" href="../../valmistelut/">Valmistelut</a>
+            <a class="nav-link" href="../../muuttujat-ja-tulostaminen/"
+              >Muuttujat ja tulostaminen</a
+            >
+            <a
+              class="nav-link"
+              href="../../kommentointi-ja-peruslaskutoimitukset/"
+              >Kommentointi ja peruslaskutoimitukset</a
+            >
+            <a class="nav-link" href="../../ehtolauseet-ja-silmukat/"
+              >Ehtolauseet ja silmukat</a
+            >
+            <!-- Tässä ollaan -->
+            <a class="nav-link active" href="#">Funktiot</a>
+          </div>
+          <!--Navbar oikealla puolella olevat elementit-->
+          <div class="navbar-nav ms-auto">
+            <a class="nav-link" href="../../harjoituksia/">Harjoituksia</a>
+            <a class="nav-link" href="../../info/">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-info-circle"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"
+                />
+                <path
+                  d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"
+                />
+              </svg>
+            </a>
+            <a class="nav-link" href="../../../en/functions/tasks">eng</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Varsinainen tekstisisältö-->
+    <div class="container">
+      <div class="text-center mt-3">
+        <h1>Funktiot</h1>
+        <ul class="nav justify-content-center">
+          <li class="nav-item">
+            <a class="nav-link active" href="../">Teoria</a>
+          </li>
+          <li class="nav-item">
+            <a
+              class="nav-link disabled"
+              href="./tehtavat/"
+              tabindex="-1"
+              aria-disabled="true"
+              >Tehtävät</a
+            >
+          </li>
+        </ul>
+        <hr />
+      </div>
+      <div>
+        <h2>Tehtävä 1: Funktioiden hyödyntäminen</h2>
+        <p>
+          Alla olevassa esimerkkikoodissa kaikki toiminta on kirjoitettu
+          pääohjelmaan. Luo kommentoitujen ohjeiden mukaisesti apufunktioita ja
+          kuljeta niille pääohjelmassa luodut muuttujat. Lopulta kutsut
+          pääohjelmasta tekemiäsi apufunktioita ja tulostat palautuksen.
+        </p>
+        <pre class="language-python">
+          <code>def main():
+    # Tarkistetaan, kumpi on alkiosta suurempi
+    # Tee tästä oma funktio nimeltä suurempi()
+    a = 12
+    b = 34
+    if a > b:
+        suurempi = a
+    else:
+        suurempi = b
+    print(suurempi)
+
+    # Lasketaan listan luvut yhteen
+    # Tee tästä oma funktio nimeltä laskeListanSumma()
+    lista = [2, 45, 61, 21, 40, 19, 32]
+    summa = 0
+    for alkio in lista:
+        summa += alkio
+    
+    print(summa)
+
+    # Lasketaan merkkijonosta isojen ja pienien kirjainten määrä
+    # Tee tästä kaksi omaa funktiota nimeltä laskePienet() ja laskeIsot() 
+    merkkijono = "Garry Kasparov voitti Speed Chess Championship Main Eventin"
+    pienet = 0
+    isot = 0
+    for kirjain in merkkijono:
+        if kirjain.isupper() == True:
+            isot += 1
+        elif kirjain.islower() == True:
+            pienet += 1
+        else:
+            continue
+
+    print("Isoja kirjaimia: " + str(isot))
+    print("Pieniä kirjaimia: " + str(pienet))
+    
+        
+if __name__ == "__main__":
+    main()</code>
+        </pre>
+        <div>
+          <button
+            type="button"
+            class="btn btn-primary"
+            id="vastaus1_button"
+            onclick="naytaVastaus1()"
+          >
+            Näytä esimerkkivastaus
+          </button>
+          <pre class="language-python" id="vastaus1">
+          <code># Funktio, joka ottaa vastaan kaksi lukua ja palauttaa niistä suuremman
+def suurempi(eka, toka):
+    if eka > toka:
+        return eka
+    else:
+        return toka
+
+# Funktio, joka laskee listan alkiot yhteen ja palauttaa summan
+def laskeListanSumma(l):
+    summa = 0
+    for alkio in l:
+        summa += alkio
+
+    return summa
+
+# Funktio, joka ottaa vastaan merkkijonon, laskee isot kirjaimet
+# ja palauttaa lukumäärän
+def laskePienet(mj):
+    pienet = 0
+    for kirjain in mj:
+        if kirjain.islower() == True:
+            pienet += 1
+        else:
+            continue
+    
+    return pienet
+
+# Funktio, joka ottaa vastaan merkkijonon, laskee isot kirjaimet
+# ja palauttaa lukumäärän
+def laskeIsot(mj):
+    isot = 0
+    for kirjain in mj:
+        if kirjain.isupper() == True:
+            isot += 1
+        else:
+            continue
+    return isot
+
+
+
+def main():
+    a = 12
+    b = 34
+
+    vastaus = suurempi(a, b)
+    print(vastaus) # Voi myös kirjoittaa suoraan print(suurempi(a, b))
+
+    lista = [2, 45, 61, 21, 40, 19, 32]
+    summa = laskeListanSumma(lista)
+    print(summa)
+
+    merkkijono = "Garry Kasparov voitti Speed Chess Championship Main Eventin"
+    # Otetaan tulos funktiolta
+    pienet = laskePienet(merkkijono)
+    isot = laskeIsot(merkkijono)
+
+    # Tulostetaan kivan näköisesti ja muutetaan int-tyyppinen muuttuja tulostuskelpoiseksi
+    # str()-funktiolla
+    print("Isoja kirjaimia: " + str(isot))
+    print("Pieniä kirjaimia: " + str(pienet))
+    
+        
+if __name__ == "__main__":
+    main()</code>
+        </pre>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h2>Tehtävä 2: Noppapeli</h2>
+        <p>
+          Tarkoituksenasi on koodata ohjelma, joka heittää noppaa eli generoi
+          satunnaisen luvun välillä 1-6. Jotta noppapeli on järkevä, on
+          käyttäjältä kysyttävä jokaisen heiton jälkeen haluaako käyttäjä
+          heittää noppaa uudelleen.
+        </p>
+        <p><b>Vinkki:</b> <code>input()</code> ja <code>import random</code></p>
+      </div>
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="vastaus2_button"
+          onclick="naytaVastaus2()"
+        >
+          Näytä esimerkkivastaus
+        </button>
+        <pre class="language-python" id="vastaus2">
+          <code># Tuodaan random-moduuli satunnaisuutta varten
+import random
+
+def main():
+    # onkoNoppaKaynnissa muuttuja pitää tallessa sitä, haluaako
+    # käyttäjä pelata noppapeliä
+    onkoNoppaKaynnissa = True
+    # Hyödynnetään while-silmukkaa sillä emme tiedä, kuinka kauan
+    # käyttäjä haluaa pelata
+    while onkoNoppaKaynnissa:
+        pelataanko = input("Heitetäänkö noppaa? (y/n): ") # Kysytään haluaako käyttäjä pelata
+        if pelataanko == "y": # Jos kyllä,
+            rndm_numero = random.randint(1,6) # niin generoidaan satunnainen luku välillä 1-6
+            print(rndm_numero) # Tulostetaan luku käyttäjälle
+        elif pelataanko == "n": # Jos ei,
+            print("Kiitos pelihetkistä!") # niin tulostetaan "Kiitos pelihetkistä!"
+            onkoNoppaKaynnissa = False # Ja lopetetaan silmukka ja koko ohjelma, sillä muuta suoritettavaa ei ole
+        else:
+            print("Nyt en ymmärrä? vastaa \"y\" tai \"n\"") # Varaudutaan myös huonolaatuiseen syötteeseen
+    
+        
+if __name__ == "__main__":
+    main()</code>
+        </pre>
+      </div>
+      <div class="mt-4">
+        <h2>Tehtävä 3: Nelilaskin</h2>
+        <p>
+          Noniin, materiaalin viimeinen tehtävä. Tarkoituksenasi on luoda
+          nelilaskin. Ohjelma kyselee käyttäjän syötettä ja syötteen mukaan osaa
+          laskea yhteen-, vähennys-, kerto- ja jakolaskuja. Myös tämä ohjelma
+          toimii siihen asti, kunnes käyttäjä päättää lopettaa laskimen käytön.
+          <b>HUOM!</b> tässä tehtävässä saat toimia vapaammin, kunhan ohjelma
+          sisältää tässä tehtävänannossa ilmoitetun toiminnan. Eli:
+        </p>
+        <ul>
+          <li>Osaa lukea käyttäjän syötettä</li>
+          <li>Osaa laskea yhteen-, vähennys-, kerto- ja jakolaskuja</li>
+          <li>Lopettaa toiminnan vasta, kun käyttäjä itse niin päättää</li>
+        </ul>
+      </div>
+      <div class="mb-4">
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="vastaus3_button"
+          onclick="naytaVastaus3()"
+        >
+          Näytä esimerkkivastaus
+        </button>
+        <pre class="language-python" id="vastaus3">
+          <code># Tuodaan random-moduuli satunnaisuutta varten
+import random
+
+def summa(a, b):
+    summa = int(a) + int(b)
+    return summa
+
+def miinus(a, b):
+    erotus = int(a)-int(b)
+    return erotus
+
+def kerto(a, b):
+    tulo = int(a)*int(b)
+    return tulo
+
+def jako(a, b):
+    osamaara = int(a)/int(b)
+    return osamaara
+
+def main():
+    onkoOhjelmaKaynnissa = True
+    print("Tervetuloa käyttämään nelilaskinta! Osaan laskea yhteen-, vähennys-, kerto- ja jakolaskuja kahdella luvulla.")
+    
+    while onkoOhjelmaKaynnissa:
+        syote = input("Millaisen laskutoimituksen haluat tehdä? Kirjoita \"info\", jos tarvitset apua!")
+        if syote == "info":
+            print("""Ilmoita aluksi millaisen laskutoimituksen haluat suorittaa:
+            - "y" = yhteenlasku
+            - "v" = vähennyslasku
+            - "k" = kertolasku
+            - "j" = jakolasku
+            - "info" = infoa ohjelman toiminnasta
+            - "q" = poistu ohjelmasta""")
+        
+        elif syote == "y": 
+            print("Valitsit yhteenlaskun!")
+            eka = input("Anna ensimmäinen yhteenlaskettava luku: ")
+            toka = input("Anna ensimmäinen yhteenlaskettava luku: ")
+            print(summa(eka, toka))
+        elif syote == "v":
+            eka = input("Anna ensimmäinen luku, josta vähennetään: ")
+            toka = input("Anna toinen luku, joka vähennetään: ")
+            print(miinus(eka, toka))
+        elif syote == "k":
+            eka = input("Anna ensimmäinen kerrottava luku: ")
+            toka = input("Anna toinen kerrottava luku: ")
+            print(kerto(eka, toka))
+        elif syote == "j":
+            eka = input("Anna ensimmäinen, jaettava luku: ")
+            toka = input("Anna toinen, jakava luku (tämä ei saa olla 0!!): ")
+            if toka == 0:
+                print("Annoit silti nollan...")
+                continue
+            else:
+                print(jako(eka, toka))
+        else:
+            print("Nyt en ymmärrä? Kirjoita \"info\", jos tarvitset apua.") # Varaudutaan myös huonolaatuiseen syötteeseen
+    
+        
+if __name__ == "__main__":
+    main()</code>
+        </pre>
+      </div>
+    </div>
+
+    <script src="./toiminta.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+    <script>
+      hljs.highlightAll();
+    </script>
+    <!-- JavaScript Bundle with Popper -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

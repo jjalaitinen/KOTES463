@@ -15,6 +15,10 @@
       integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"
+    />
     <link rel="stylesheet" href="tyylit.css" />
     <title>Ohjelmoinnin perusteet - harjoituksia</title>
   </head>
@@ -102,151 +106,85 @@
         <hr />
       </div>
       <div>
-        <p class="text-danger">
-          "Harjoituksia"-sivu on vielä kesken <i>(06.12.2022)</i>
-        </p>
         <p>
-          Tämä osio sisältää omaa taitoa harjaannuttavia harjoituksia.
-          Harjoituksissa tulee soveltaa aiemmin materiaalissa opittuja taitoja.
-          Harjoitustehtävät on luokiteltu tähtien avulla vaikeusasteittain.
+          Tämä osio sisältää omaa kurssin harjoitustehtävät Harjoituksissa tulee
+          soveltaa aiemmin materiaalissa opittuja taitoja. Harjoitustehtävät on
+          luokiteltu tähtien avulla vaikeusasteittain. Riippuen suoritatko
+          kurssia 1op vai 2op laajuisesti tulee sinun kerätä tarpeeksi tähtiä.
         </p>
-        <ul>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-star-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-              />
-            </svg>
-            = Helpohko
-          </li>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-star-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-star-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-              />
-            </svg>
-            = Keskitaso
-          </li>
-          <li>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-star-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-star-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-              />
-            </svg>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="16"
-              height="16"
-              fill="currentColor"
-              class="bi bi-star-fill"
-              viewBox="0 0 16 16"
-            >
-              <path
-                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"
-              />
-            </svg>
-            = Vaikea
-          </li>
-        </ul>
+        <div class="row">
+          <div class="col-sm">
+            <div>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star"></i
+              ><i class="bi bi-star"></i> = Helppo
+            </div>
+            <div>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star"></i> = Keskivaikea
+            </div>
+            <div>
+              <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+              ><i class="bi bi-star-fill"></i> = Vaikea
+            </div>
+          </div>
+          <div class="col-sm">
+            <div>
+              1op = <i class="bi bi-star"></i><i class="bi bi-star"></i
+              ><i class="bi bi-star"></i><i class="bi bi-star"></i
+              ><i class="bi bi-star"></i> (5)
+            </div>
+            <hr />
+            <div>
+              2op = <i class="bi bi-star"></i><i class="bi bi-star"></i
+              ><i class="bi bi-star"></i><i class="bi bi-star"></i
+              ><i class="bi bi-star"></i><i class="bi bi-star"></i
+              ><i class="bi bi-star"></i><i class="bi bi-star"></i
+              ><i class="bi bi-star"></i><i class="bi bi-star"></i> (10)
+            </div>
+          </div>
+        </div>
+        <hr />
         <div>
-          <h2>Tehtävä 1 - Etsi listan toiseksi suurin</h2>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star"></i
+          ><i class="bi bi-star"></i>
+          <h3>Tehtävä 1 - Etsi listan toiseksi suurin</h3>
           <p>
             Seuraava taulukko pitää sisällään 20 kokonaislukua ja liukulukua.
             Tehtävänäsi on kirjoittaa ohjelma, joka etsii ja palauttaa listan
             <b>toiseksi</b> suurimman alkion.
           </p>
-          <pre>
-          <code>numerotaulukko = [2, 8, 1.3, 9.0, 10, 81, 0.5, -25, 63, 212, 4.3, 12, 21, 50, 61, 2.1, 82, -10, 0.78463, 109]</code>
-        </pre>
-          <p>
-            Voit kokeilla ohjelman toimintaa myös seuraavalla n. 10 000 alkiota
-            sisältävällä taulukolla :). 10 000:n alkion lista löytyy muuttujasta
-            "randomi_lista".
-          </p>
-          <pre>
-          <code>import random
-randomi_lista = random.sample(range(0, 1000000), 10000)
-print(randomi_lista)</code>
-        </pre>
+          <pre><code>numerotaulukko = [2, 8, 1.3, 9.0, 10, 81, 0.5, -25, 63, 212, 4.3, 12, 21, 50, 61, 2.1, 82, -10, 0.78463, 109]</code></pre>
         </div>
+        <hr />
         <div>
-          <h2>Tehtävä 2 - Etsi listan parilliset</h2>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star"></i
+          ><i class="bi bi-star"></i>
+          <h3>Tehtävä 2 - Etsi listan parilliset</h3>
           <p>
             Seuraava lista pitää sisällään 30 kokonaislukualkiota. Kirjoita
             ohjelma, joka etsii listan kaikki parilliset alkiot ja tulostaa
             niistä jokaisen omalle rivilleen.
           </p>
           <pre>
-          <code>lista = [20, 35, 48, 89, 36, 38, 34, 63, 79, 82, 32, 12, 52, 72, 19, 37, 94, 39, 74, 33, 45, 85, 86, 59, 7, 61, 42, 93, 22, 23]</code>
-        </pre>
+          <code>lista = [20, 35, 48, 89, 36, 38, 34, 63, 79, 82, 32, 12, 52, 72, 19, 37, 94, 39, 74, 33, 45, 85, 86, 59, 7, 61, 42, 93, 22, 23]</code></pre>
         </div>
+        <hr />
         <div>
-          <h2>Tehtävä 3 - Horoskooppi</h2>
-          <p>
-            Tehtävänäsi on kirjoittaa ohjelma, joka kysyy käyttäjältä ensiksi
-            syntymäpäivänsä ja kertoo tämän jälkeen, mikä hänen horoskooppinsa
-            on. Voit käyttää hyödyksesi alla olevaa taulukkoa horoskooppien
-            päivämääristä:
-          </p>
-        </div>
-        <div>
-          <h2>Tehtävä 4 - Keskiarvo ilman valmista funktiota</h2>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+          ><i class="bi bi-star"></i>
+          <h3>Tehtävä 3 - Keskiarvo ilman valmista funktiota</h3>
           <p>
             Seuraavassa listassa on Vili-Mirjamin 9.lk:n päättötodistuksen
             arvosanat. Kirjoita Python-ohjelma, joka laskee päättötodistuksen
             kaikkien arvosanojen keskiarvon ja tulostaa sen.
           </p>
-          <pre>
-          <code>arvosanat = [7, 9, 10, 5, 6, 6, 8, 9, 10, 5, 7, 9, 7, 6, 7, 10, 8, 7]</code>
-        </pre>
+          <pre><code>arvosanat = [7, 9, 10, 5, 6, 6, 8, 9, 10, 5, 7, 9, 7, 6, 7, 10, 8, 7]</code></pre>
         </div>
+        <hr />
         <div>
-          <h2>Tehtävä 5 - Palindromi</h2>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+          ><i class="bi bi-star"></i>
+          <h3>Tehtävä 5 - Palindromi</h3>
           <p>
             Palindromilla tarkoitetaan sanaa, virkettä lukua tai mitä tahansa
             merkkijonoa, jonka merkkien järjestys on takaperin sama, kuin
@@ -255,30 +193,122 @@ print(randomi_lista)</code>
             tarkistaa onko kyseessä palindromi.
           </p>
         </div>
+        <hr />
         <div>
-          <h2>Tehtävä 6 - Sanalaskuri</h2>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+          ><i class="bi bi-star"></i>
+          <h3>Tehtävä 6 - Sanalaskuri</h3>
           <p>
             Sanalaskuri kertoo nimensä mukaisesti, kuinka monta sanaa tekstistä
             löytyy. Tehtävänäsi on kirjoittaa Python-ohjelma joka laskee sille
             tuodusta merkkijonosta sanojen määrän ja tulostaa vastauksen.
           </p>
         </div>
+        <hr />
         <div>
-          <h2>Tehtävä 7 - Lyhentäjä</h2>
-          <p></p>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+          ><i class="bi bi-star"></i>
+          <h3>Tehtävä 7 - PIN-koodi</h3>
+          <p>
+            Useimmat asiat, kuten puhelin, tietokone ja jopa rappukäytävät
+            suojataan nelinumeroisilla PIN-koodeilla. PIN-koodia saa yrittää
+            muutaman kerran, kunnes laite lukkiutuu. Tehtävänäsi on kirjoittaa
+            Python-ohjelma, joka kyselee käyttäjältä nelinumeroista PIN-koodia.
+          </p>
+          <ul>
+            <li>
+              <b>JOS</b> käyttäjän arvaus menee väärin, ohjelma ilmoittaa:
+              "Väärin, kokeile uudestaan!"
+            </li>
+            <li>
+              <b>JOS</b> käyttäjän arvaus menee oikein, ohjelma ilmoittaa:
+              "Tervetuloa!" <b>JA</b> kertoo käyttäjälle, montako yritystä
+              sisäänpääsy vaati.
+            </li>
+            <li>Oikea PIN-koodi on "1984"</li>
+          </ul>
         </div>
+        <hr />
         <div>
-          <h2>Tehtävä 8 - FizzBuzz</h2>
-          <p></p>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+          ><i class="bi bi-star"></i>
+          <h3>Tehtävä 8 - FizzBuzz</h3>
+          <p>
+            FizzBuzz on oikean elämän työnhaussakin käytetty testikysymys, jolla
+            kartoitetaan hakijan ohjelmoinnillista osaamista. Tarkoituksenasi on
+            kirjoittaa ohjelma, joka tulostaa luvut välillä 1-100.
+          </p>
+          <ul>
+            <li>
+              <b>JOS</b> luku on jaollinen kolmella (3) tulostetaan "Fizz"
+            </li>
+            <li>
+              <b>JOS</b> luku on jaollinen viidellä (5) tulostetaan "Buzz"
+            </li>
+            <li>
+              ja <b>JOS</b> luku on jaollinen sekä kolmella, että viidellä
+              tulostetaan "FizzBuzz".
+            </li>
+          </ul>
         </div>
+        <hr />
         <div>
-          <h2>Tehtävä 9 - Collatzin konjektuuri</h2>
-          <p></p>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+          ><i class="bi bi-star"></i>
+          <h3>Tehtävä 9 - Collatzin konjektuuri</h3>
+          <p>
+            Collatzin konjektuuri on "helpoin" ratkaisematon pulma, vaikka
+            kyseessä on verttain yksinkertainen väittämä, eivät edes
+            huippumatemaatikot ole pystyneet sitä todistamaan. Algoritmi toimii
+            niin, että:
+          </p>
+          <ol>
+            <li>Valitaan mikä tahansa positiivinen kokonaisluku</li>
+            <li>Jos luku on parillinen jaetaan se kahdella</li>
+            <li>Jos luku on pariton, kerrotaan se kolmella ja lisätään yksi</li>
+            <li>
+              Jatketaan siihen asti, kunnes (<b>lue:</b> aina) lopputulokseksi
+              saadaan numero 1
+            </li>
+          </ol>
+          <p>
+            Tehtävänäsi on kirjoittaa ohjelma, joka kysyy käyttäjältä jonkin
+            positiivisen kokonaisluvun ja näyttää askel kerrallaan, miten luku
+            muuttuu algoritmin mukaan.
+          </p>
         </div>
+        <hr />
         <div>
-          <h2>Tehtävä 9 - Anagrammi</h2>
-          <p>Anagrammi tarkoittaa sitä, että</p>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+          ><i class="bi bi-star-fill"></i>
+          <h3>Tehtävä 10 - Anagrammi</h3>
+          <p>
+            Anagrammi tarkoittaa sitä, että merkkijono on uudelleen
+            järjesteltävissä yhdeksi tai useammaksi erilaiseksi sanaksi.
+            Esimerkiksi sanasta "Ivalo" voidaan muodostaa uudelleen
+            järjestelemällä sana "Valio" tai "Olavi". Pidempienkin sanojen
+            kanssa voidaan leikkiä: "Mauno Henrik Koivisto" -> "Arvoitus Koko
+            Ihminen".
+          </p>
+          <p>
+            Tehtävänäsi on kirjoittaa Python-ohjelma, joka kysyy käyttäjältä
+            kaksi sanaa ja tarkistaa ovatko nämä sanat anagrammeja keskenään.
+          </p>
         </div>
+        <hr />
+        <div>
+          <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i
+          ><i class="bi bi-star-fill"></i>
+          <h3>Tehtävä 11 - Tunteja hengissä</h3>
+          <p>
+            Tehtävänäsi on kirjoittaa ohjelma, joka selvittää käyttäjän
+            syntymäpäivän ja laskee vuorokauden tarkkuudella montako tuntia
+            käyttäjä on ollut tähän asti hengissä.
+          </p>
+          Vinkki:
+          <pre><code>from datetime import date</code></pre>
+        </div>
+        <hr />
       </div>
     </div>
 
